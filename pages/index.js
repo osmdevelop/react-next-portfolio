@@ -16,7 +16,9 @@ import web4 from '../public/web4.png'
 import web5 from '../public/web5.png'
 import web6 from '../public/web6.png'
 import {useState} from 'react'
-
+// React reveal
+import Fade from 'react-reveal/Fade';
+import Zoom from 'react-reveal/Zoom';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
@@ -41,11 +43,13 @@ export default function Home() {
               </li>
             </ul>
           </nav>
+            <Fade top>
           <div className='text-center md:py-20 p-10'>
-            <h2 className='text-5xl py-2 text-teal-600 font-medium md:text-6xl max-sm:text-4xl'>Oleh Smolikevych</h2>
-            <h3 className='text-2xl py-2 md:text-3xl md:mt-10 dark:text-gray-100'>Front End Developer</h3>
-            <p className='text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto dark:text-gray-400'>Front End Developer with passion building web pages and apps with React.js.</p>
+              <h2 className='text-5xl py-2 text-teal-600 font-medium md:text-6xl max-sm:text-4xl'>Oleh Smolikevych</h2>
+              <h3 className='text-2xl py-2 md:text-3xl md:mt-10 dark:text-gray-100'>Front End Developer</h3>
+              <p className='text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto dark:text-gray-400'>Front End Developer with passion building web pages and apps with React.js.</p>
           </div>
+            </Fade>
           <div className='text-5xl flex justify-center gap-16 py-3 text-gray-600'>
             <a href="https://www.linkedin.com/in/olehsmolikevych/" className='hover:text-teal-300 transition duration-0 hover:duration-150'><AiFillLinkedin /></a>
             <a href="github.com/osmdevelop" className='hover:text-teal-300 transition duration-0 hover:duration-150'><AiFillGithub /></a>
@@ -64,18 +68,19 @@ export default function Home() {
               Currently I <span className="text-teal-500">build</span> and <span className="text-teal-500">update</span> web pages created for newcomers from Ukraine to the United States to find all necessary information which is crucial at the beginnings of the stay to adapt to the new environment.
             </p>
           </div>
-
           <div className='lg:flex gap-10 '>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10  flex-1 dark:bg-sky-900 dark:text-gray-200 flex flex-col justify-center items-center">
-              <Image src={code} width={100} height={100} />
-              <h3 className='text-lg font-medium pt-8 pb-2'>Front End Development</h3>
-              <p className='py-2'>Building user-friendly web pages using modern tools</p>
-                <h4 className='py-4 text-teal-400'>Tools I use</h4>
-                <p className='text-gray-800 py-1 dark:text-sky-200'>HTML</p>
-                <p className='text-gray-800 py-1 dark:text-sky-200'>CSS / Tailwind, Bootstrap frameworks</p>
-                <p className='text-gray-800 py-1 dark:text-sky-200'>JS / React.js & package managers</p>
-            </div>
-
+            <Fade left>
+              <div className="text-center shadow-lg p-10 rounded-xl my-10  flex-1 dark:bg-sky-900 dark:text-gray-200 flex flex-col justify-center items-center">
+                <Image src={code} width={100} height={100} />
+                <h3 className='text-lg font-medium pt-8 pb-2'>Front End Development</h3>
+                <p className='py-2'>Building user-friendly web pages using modern tools</p>
+                  <h4 className='py-4 text-teal-400'>Tools I use</h4>
+                  <p className='text-gray-800 py-1 dark:text-sky-200'>HTML</p>
+                  <p className='text-gray-800 py-1 dark:text-sky-200'>CSS / Tailwind, Bootstrap frameworks</p>
+                  <p className='text-gray-800 py-1 dark:text-sky-200'>JS / React.js & package managers</p>
+              </div>
+            </Fade>
+            <Fade right>
             <div className="text-center shadow-lg p-10 rounded-xl my-10  flex-1 dark:bg-sky-900 dark:text-gray-200 flex flex-col">
               <Image src={design} width={100} height={100} className="self-center" />
               <h3 className='text-lg font-medium pt-8 pb-2'>Creating Web pages using builders & IT Support</h3>
@@ -85,6 +90,7 @@ export default function Home() {
                 <p className='text-gray-800 py-1 dark:text-sky-200'>GoDaddy</p>
                 <p className='text-gray-800 py-1 dark:text-sky-200'>Office 365</p>
             </div>
+            </Fade>
             {/* <div className="text-center shadow-lg p-10 rounded-xl my-10  flex-1 dark:bg-sky-900 dark:text-gray-200">
               <Image src={design} width={100} height={100} />
               <h3 className='text-lg font-medium pt-8 pb-2'>Title</h3>
@@ -100,25 +106,27 @@ export default function Home() {
           <div>
             <h3 className='text-3xl py-1 text-teal-600'>Portfolio</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              Since the beginning of my journey as a freelance designer and
-              developer, I've done remote work for
-              <span className="text-teal-500"> agencies </span>
+              Some random text
+              {/* <span className="text-teal-500"> agencies </span>
               consulted for <span className="text-teal-500">startups </span>
               and collaborated with talanted people to create digital products
-              for both business and consumer use.
+              for both business and consumer use. */}
             </p>
-            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
+            {/* <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
               I offer from a wide range of services, including brand design,
               programming and teaching.
-            </p>
+            </p> */}
           </div>
           <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap items-center '>
+            <Zoom>
             <div className='basis-1/3 flex-1'>
               <Image src={web1} 
               className='rounded-lg object-cover' 
               width={"100%"} 
               height={"100%"} />
             </div>
+              </Zoom>
+              <Zoom>
             <div className='basis-1/3 flex-1'>
               <Image src={web2} 
               className='rounded-lg object-cover' 
@@ -126,30 +134,39 @@ export default function Home() {
               height={"100%"} 
               />
             </div>
+            </Zoom>
+            <Zoom>
             <div className='basis-1/3 flex-1'>
               <Image src={web3} 
               className='rounded-lg object-cover' 
               width={"100%"} 
               height={"100%"} />
             </div>
+            </Zoom>
+            <Zoom>
             <div className='basis-1/3 flex-1'>
               <Image src={web4} 
               className='rounded-lg object-cover' 
               width={"100%"} 
               height={"100%"} />
             </div>
+            </Zoom>
+            <Zoom>
             <div className='basis-1/3 flex-1'>
               <Image src={web5} 
               className='rounded-lg object-cover' 
               width={"100%"} 
               height={"100%"} />
             </div>
+            </Zoom>
+            <Zoom>
             <div className='basis-1/3 flex-1'>
               <Image src={web6} 
               className='rounded-lg object-cover' 
               width={"100%"} 
               height={"100%"} />
             </div>
+            </Zoom>
           </div>
         </section>
       </main>
