@@ -26,7 +26,7 @@ import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   return (
     <div className={darkMode ? "dark" : ""}>
       <Head>
@@ -73,7 +73,7 @@ export default function Home() {
               Currently I <span className="text-teal-500">build</span> and <span className="text-teal-500">update</span> web pages created for newcomers from Ukraine to the United States to find all necessary information which is crucial at the beginnings of the stay to adapt to the new environment.
             </p>
           </div>
-          <div className='lg:flex gap-10 '>
+          <div className='lg:flex gap-10'>
             <Fade left>
               <div className="text-center shadow-lg p-10 rounded-xl my-10  flex-1 dark:bg-sky-900 dark:text-gray-200 flex flex-col justify-center items-center">
                 <Image src={code} width={100} height={100} />
@@ -179,8 +179,8 @@ export default function Home() {
             <div>
               <h3 className='text-3xl py-1 text-teal-600'>Tutors</h3>
             </div>
-            <div className='flex justify-around'>
-              <div className='max-w-sm rounded-lg bg-teal-400 p-6'>
+            <div className='flex max-md:flex-col justify-around max-sm:gap-10'>
+              <div className='max-w-sm rounded-lg p-6 shadow-lg dark:bg-sky-900 dark:text-gray-200'>
                 <Image src={kevin} 
                 className='rounded-lg'
                 width={400}
@@ -194,7 +194,7 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <div className='max-w-sm rounded-lg bg-teal-400 p-6'>
+                <div className='max-w-sm rounded-lg p-6 shadow-lg dark:bg-sky-900 dark:text-gray-200'>
                   <Image src={bob} 
                   className='rounded-lg'
                   width={400}
