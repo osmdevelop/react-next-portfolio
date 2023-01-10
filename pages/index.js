@@ -3,7 +3,9 @@ import { BsFillMoonStarsFill } from 'react-icons/bs'
 import {
   AiFillTwitterCircle,
   AiFillLinkedin,
-  AiFillGithub
+  AiFillGithub,
+  AiFillYoutube,
+  AiOutlineLink
 } from 'react-icons/ai'
 import Image from 'next/image'
 import design from '../public/design.png'
@@ -15,13 +17,16 @@ import web3 from '../public/web3.png'
 import web4 from '../public/web4.png'
 import web5 from '../public/web5.png'
 import web6 from '../public/web6.png'
+
+import kevin from '../public/KevinPowell.png'
+import bob from '../public/BobZiroll.png'
 import { useState } from 'react'
 // React reveal
 import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
   return (
     <div className={darkMode ? "dark" : ""}>
       <Head>
@@ -30,7 +35,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className='bg-white px-10 max-sm:px-5 md:px-20 lg:px-40 dark:bg-gray-900'>
+      <main className='bg-white px-10 pb-10 max-sm:px-5 md:px-20 lg:px-40 dark:bg-gray-900'>
         <section className='min-h-full pb-6'>
           <nav className='py-10 mb-12 flex justify-between'>
             <h1 className='text-xl font-burtons dark:text-teal-500'>osmdevelop</h1>
@@ -39,21 +44,21 @@ export default function Home() {
                 <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='cursor-pointer text-2xl dark:text-white' />
               </li>
               <li>
-                <a className='bg-gradient-to-r from-cyan-500 to-teal-500 bg-cyan-500 text-white px-4 py-2 rounded-md ml-8' href="#">Resume</a>
+                <a className='bg-gradient-to-r from-cyan-500 to-teal-500 bg-cyan-500 text-white px-4 py-2 rounded-md ml-8 hover:from-cyan-500 to-teal-500 bg-cyan-500 transition duration-0 hover:duration-150' href="#">Resume</a>
               </li>
             </ul>
           </nav>
-          <Fade top>
             <div className='text-center md:py-20 p-10'>
+          <Fade top>
               <h2 className='text-5xl py-2 text-teal-600 font-medium md:text-6xl max-sm:text-4xl'>Oleh Smolikevych</h2>
+          </Fade>
               <h3 className='text-2xl py-2 md:text-3xl md:mt-10 dark:text-gray-100'>Front End Developer</h3>
               <p className='text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto dark:text-gray-400'>Front End Developer with passion building web pages and apps with React.js.</p>
             </div>
-          </Fade>
           <div className='text-5xl flex justify-center gap-16 py-3 text-gray-600'>
             <a href="https://www.linkedin.com/in/olehsmolikevych/" className='hover:text-teal-300 transition duration-0 hover:duration-150'><AiFillLinkedin /></a>
-            <a href="github.com/osmdevelop" className='hover:text-teal-300 transition duration-0 hover:duration-150'><AiFillGithub /></a>
-            <a href="twitter.com/OlehSml" className='hover:text-teal-300 transition duration-0 hover:duration-150'><AiFillTwitterCircle /></a>
+            <a href="https://www.github.com/osmdevelop" className='hover:text-teal-300 transition duration-0 hover:duration-150'><AiFillGithub /></a>
+            <a href="https://www.twitter.com/OlehSml" className='hover:text-teal-300 transition duration-0 hover:duration-150'><AiFillTwitterCircle /></a>
           </div>
         </section>
 
@@ -168,6 +173,41 @@ export default function Home() {
               </div>
             </Zoom>
           </div>
+        </section>
+        {/* tutors */}
+        <section>
+            <div>
+              <h3 className='text-3xl py-1 text-teal-600'>Tutors</h3>
+            </div>
+            <div className='flex justify-around'>
+              <div className='max-w-sm rounded-lg bg-teal-400 p-6'>
+                <Image src={kevin} 
+                className='rounded-lg'
+                width={400}
+                height={400} />
+                <h4 className='text-2xl mt-3'>Kevin Powell | CSS</h4>
+                <p>CSS Evangelist. Teacher, Youtube content creator with over 600k subscribers</p>
+                <div className='flex gap-3 text-3xl mt-3'>
+                  <a target='_blank' href="https://www.youtube.com/@KevinPowell"><AiFillYoutube /></a>
+                  <a target='_blank' href="https://twitter.com/KevinJPowell"><AiFillTwitterCircle /></a>
+                  <a target='_blank' href="https://www.kevinpowell.co/"><AiOutlineLink /></a>
+                </div>
+              </div>
+              <div>
+                <div className='max-w-sm rounded-lg bg-teal-400 p-6'>
+                  <Image src={bob} 
+                  className='rounded-lg'
+                  width={400}
+                  height={400} />
+                  <h4 className='text-2xl mt-3'>Bob Ziroll | React</h4>
+                  <p>Head of Education at Scrimba, contributor Freecodecamp</p>
+                  <div className='flex gap-3 text-3xl mt-3'>
+                    <a target='_blank' href="https://twitter.com/bobziroll"><AiFillTwitterCircle /></a>
+                    <a target='_blank' href="https://scrimba.com/teachers/bobziroll"><AiOutlineLink /></a>
+                </div>
+                </div>
+              </div>
+            </div>
         </section>
       </main>
     </div>
