@@ -179,33 +179,32 @@ export default function Home() {
             <div>
               <h3 className='text-3xl py-1 text-teal-600'>Tutors</h3>
             </div>
-            <div className='flex max-md:flex-col justify-around max-sm:gap-10'>
-              <div className='max-w-sm rounded-lg p-6 shadow-lg dark:bg-sky-900 dark:text-gray-200'>
+            <div className='flex max-md:flex-col max-md: justify-around max-sm:gap-10  flex-col gap-10 py-10 lg:flex-row lg:flex-wrap items-center'>
+              <div className='max-w-sm max-sm:w-4/5 rounded-lg p-6 shadow-lg dark:bg-sky-900 dark:text-gray-200'>
                 <Image src={kevin} 
                 className='rounded-lg'
                 width={400}
                 height={400} />
-                <h4 className='text-2xl mt-3'>Kevin Powell | CSS</h4>
+                <h4 className='text-2xl mt-3 max-sm:text-xl'>Kevin Powell | <span className='text-teal-400'>CSS</span></h4>
                 <p>CSS Evangelist. Teacher, Youtube content creator with over 600k subscribers</p>
-                <div className='flex gap-3 text-3xl mt-3'>
+                <div className='flex gap-3 text-3xl max-sm:justify-evenly mt-3'>
                   <a target='_blank' href="https://www.youtube.com/@KevinPowell"><AiFillYoutube /></a>
                   <a target='_blank' href="https://twitter.com/KevinJPowell"><AiFillTwitterCircle /></a>
                   <a target='_blank' href="https://www.kevinpowell.co/"><AiOutlineLink /></a>
                 </div>
               </div>
-              <div>
-                <div className='max-w-sm rounded-lg p-6 shadow-lg dark:bg-sky-900 dark:text-gray-200'>
-                  <Image src={bob} 
-                  className='rounded-lg'
-                  width={400}
-                  height={400} />
-                  <h4 className='text-2xl mt-3'>Bob Ziroll | React</h4>
-                  <p>Head of Education at Scrimba, contributor Freecodecamp</p>
-                  <div className='flex gap-3 text-3xl mt-3'>
-                    <a target='_blank' href="https://twitter.com/bobziroll"><AiFillTwitterCircle /></a>
-                    <a target='_blank' href="https://scrimba.com/teachers/bobziroll"><AiOutlineLink /></a>
-                </div>
-                </div>
+              
+              <div className='max-w-sm max-sm:w-4/5 rounded-lg p-6 shadow-lg dark:bg-sky-900 dark:text-gray-200'>
+                <Image src={bob} 
+                className='rounded-lg'
+                width={400}
+                height={400} />
+                <h4 className='text-2xl mt-3 max-sm:text-xl'>Bob Ziroll | <span className='text-teal-400'>React</span></h4>
+                <p>Head of Education at Scrimba, contributor Freecodecamp</p>
+                <div className='flex gap-3 text-3xl mt-3 max-sm:justify-evenly'>
+                  <a target='_blank' href="https://twitter.com/bobziroll"><AiFillTwitterCircle /></a>
+                  <a target='_blank' href="https://scrimba.com/teachers/bobziroll"><AiOutlineLink /></a>
+              </div>
               </div>
             </div>
         </section>
