@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { BsFillMoonStarsFill } from 'react-icons/bs'
+import { BsSun } from 'react-icons/bs'
 import {
   AiFillTwitterCircle,
   AiFillLinkedin,
@@ -16,6 +16,10 @@ import web3 from '../public/web3.png'
 import web4 from '../public/web4.png'
 import web5 from '../public/web5.png'
 import web6 from '../public/web6.png'
+
+import gfrontend from '../public/gfrontend.png'
+import gcss from '../public/gcss.png'
+import gjs from '../public/gjs.png'
 
 import kevin from '../public/KevinPowell.png'
 import bob from '../public/BobZiroll.png'
@@ -44,7 +48,7 @@ export default function Home() {
             <h1 className='text-xl font-burtons dark:text-teal-500'>osmdevelop</h1>
             <ul className='flex items-center'>
               <li>
-                <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='cursor-pointer text-2xl dark:text-white' />
+                <BsSun onClick={() => setDarkMode(!darkMode)} className='cursor-pointer text-2xl dark:text-white' />
               </li>
               <li>
                 <a className='bg-gradient-to-r from-cyan-500 to-teal-500 bg-cyan-500 text-white px-4 py-2 rounded-md ml-8 hover:from-cyan-500 to-teal-500 bg-cyan-500 transition duration-0 hover:duration-150' href="#">Resume</a>
@@ -81,7 +85,7 @@ export default function Home() {
               where I practiced building web pages and apps using modern technologies. I have done <span className="text-teal-500">freelance work</span> for people and small businesses.
             </p>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              Currently I <span className="text-teal-500">build</span> and <span className="text-teal-500">update</span> web pages created for newcomers from Ukraine to the United States to find all necessary information which is crucial at the beginnings of the stay to adapt to the new environment.
+              Currently I <span className="text-teal-500">build</span> and <span className="text-teal-500">update</span> web pages for newcomers from Ukraine to the United States to provide all necessary information which is crucial at the beginnings of the stay and adapt to the new environment.
             </p>
           </div>
           <div className='lg:flex gap-10'>
@@ -107,15 +111,6 @@ export default function Home() {
                 <p className='text-gray-800 py-1 dark:text-sky-200'>Office 365</p>
               </div>
             </Fade>
-            {/* <div className="text-center shadow-lg p-10 rounded-xl my-10  flex-1 dark:bg-sky-900 dark:text-gray-200">
-              <Image src={design} width={100} height={100} />
-              <h3 className='text-lg font-medium pt-8 pb-2'>Title</h3>
-              <p className='py-2'>Text</p>
-                <h4 className='py-4 text-teal-400'>Tools I use</h4>
-                <p className='text-gray-800 py-1 dark:text-sky-200'>tool</p>
-                <p className='text-gray-800 py-1 dark:text-sky-200'>tool</p>
-                <p className='text-gray-800 py-1 dark:text-sky-200'>tool</p>
-            </div> */}
           </div>
         </section>
         {/* PORTFOLIO */}
@@ -126,7 +121,7 @@ export default function Home() {
               Some random text
               {/* <span className="text-teal-500"> agencies </span>
               consulted for <span className="text-teal-500">startups </span>
-              and collaborated with talanted people to create digital products
+              and collaborated with talented people to create digital products
               for both business and consumer use. */}
             </p>
             {/* <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
@@ -142,6 +137,12 @@ export default function Home() {
                   className='rounded-lg object-cover'
                   width={"100%"}
                   height={"100%"} />
+                <a className='right-0 text-6xl bg-slate-700 rounded-full
+                text-white absolute mr-3 p-1 -mt-20 round w-100 
+                hover:text-teal-300 
+                  transition duration-0 hover:duration-150
+                  max-sm:text-5xl max-sm:-mt-16 max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-tenzies-game"><AiFillGithub className='-mt-px self-end' />
+                </a>
               </div>
             </Zoom>
             <Zoom>
@@ -151,6 +152,12 @@ export default function Home() {
                   width={"100%"}
                   height={"100%"}
                 />
+                <a className='right-0 text-6xl bg-slate-700 rounded-full
+                text-white absolute mr-3 p-1 -mt-20 round w-100 
+                hover:text-teal-300 
+                  transition duration-0 hover:duration-150
+                  max-sm:text-5xl max-sm:-mt-16 max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-tenzies-game"><AiFillGithub className='-mt-px self-end' />
+                </a>
               </div>
             </Zoom>
             <Zoom>
@@ -159,6 +166,12 @@ export default function Home() {
                   className='rounded-lg object-cover'
                   width={"100%"}
                   height={"100%"} />
+                <a className='right-0 text-6xl bg-slate-700 rounded-full
+                text-white absolute mr-3 p-1 -mt-20 round w-100 
+                hover:text-teal-300 
+                  transition duration-0 hover:duration-150
+                  max-sm:text-5xl max-sm:-mt-16 max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-tenzies-game"><AiFillGithub className='-mt-px self-end' />
+                </a>
               </div>
             </Zoom>
             <Zoom>
@@ -167,6 +180,12 @@ export default function Home() {
                   className='rounded-lg object-cover'
                   width={"100%"}
                   height={"100%"} />
+                  <a className='right-0 text-6xl bg-slate-700 rounded-full
+                text-white absolute mr-3 p-1 -mt-20 round w-100 
+                hover:text-teal-300 
+                  transition duration-0 hover:duration-150
+                  max-sm:text-5xl max-sm:-mt-16 max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-tenzies-game"><AiFillGithub className='-mt-px self-end' />
+                </a>
               </div>
             </Zoom>
             <Zoom>
@@ -175,46 +194,84 @@ export default function Home() {
                   className='rounded-lg object-cover'
                   width={"100%"}
                   height={"100%"} />
+                <a className='right-0 text-6xl bg-slate-700 rounded-full
+                text-white absolute mr-3 p-1 -mt-20 round w-100 
+                  hover:text-teal-300 
+                    transition duration-0 hover:duration-150
+                    max-sm:text-5xl max-sm:-mt-16 max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-tenzies-game"><AiFillGithub className='-mt-px self-end' />
+                  </a>
               </div>
             </Zoom>
             <Zoom>
-              <div className='basis-1/3 flex-1'>
+              <div className='basis-1/3 flex-1 border'>
                 <Image
                   src={web6}
                   className='rounded-lg object-cover'
                   width={"100%"}
-                  height={"100%"} />
-                <p className='text-white absolute -mt-10 border w-100 bg-slate-700 w-full'>
-                    THE LINK
-                </p>
-              </div>
+                  height={"100%"} 
+                  />
+                  <a className='right-0 text-6xl bg-slate-700 rounded-full
+                text-white absolute mr-3 p-1 -mt-20 round w-100 
+                hover:text-teal-300 
+                transition duration-0 hover:duration-150
+                max-sm:text-5xl max-sm:-mt-16 max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-tenzies-game"><AiFillGithub className='-mt-px self-end' />
+                  </a>
+                </div>
             </Zoom>
           </div>
         </section>
+        {/* Certificates */}
+        <section>
+            <div>
+              <h3 className='text-3xl py-1 text-teal-600'>Certificates</h3>
+            </div>
+            <div className='flex gap-3 max-lg:flex-col'>
+              <div>
+                <Image src={gfrontend}
+                    className='rounded-lg object-cover'
+                    width={"100%"}
+                    height={"100%"} />
+              </div>
+              <div>
+                <Image src={gcss}
+                    className='rounded-lg object-cover'
+                    width={"100%"}
+                    height={"100%"} />
+              </div>
+              <div>
+                <Image src={gcss}
+                    className='rounded-lg object-cover'
+                    width={"100%"}
+                    height={"100%"} />
+              </div>
+            </div>
+        </section>
+        {/* / Certificates */}
         {/* TUTORS */}
         <section>
             <div>
               <h3 className='text-3xl py-1 text-teal-600'>Tutors</h3>
             </div>
-            <div className='flex max-md:flex-col max-md: justify-around max-sm:gap-10  flex-col gap-10 py-10 lg:flex-row lg:flex-wrap items-center'>
-              <div className='max-w-sm max-sm:w-4/5 rounded-lg p-6 shadow-lg dark:bg-sky-900 dark:text-gray-200'>
+
+            <div className='flex flex-col max-md: justify-around max-sm:gap-10   gap-10 py-10 lg:flex-row lg:flex-wrap items-center'>
+              <div className='max-w-xs max-sm:w-4/5 rounded-lg p-6 shadow-lg dark:bg-sky-900 dark:text-gray-200'>
                 <Image src={kevin} 
                 className='rounded-lg'
-                width={400}
-                height={400} />
+                width={300}
+                height={300} />
                 <h4 className='text-2xl mt-3 max-sm:text-xl'>Kevin Powell | <span className='text-teal-400'>CSS</span></h4>
                 <p>CSS Evangelist. Teacher, Youtube content creator with over 600k subscribers</p>
                 <div className='flex gap-3 text-3xl max-sm:justify-evenly mt-3'>
                   <a className='hover:text-teal-300 
-            transition duration-0 hover:duration-150' target='_blank' href="https://www.youtube.com/@KevinPowell"><AiFillYoutube /></a>
+                  transition duration-0 hover:duration-150' target='_blank' href="https://www.youtube.com/@KevinPowell"><AiFillYoutube /></a>
                   <a className='hover:text-teal-300 
-            transition duration-0 hover:duration-150' target='_blank' href="https://twitter.com/KevinJPowell"><AiFillTwitterCircle /></a>
+                  transition duration-0 hover:duration-150' target='_blank' href="https://twitter.com/KevinJPowell"><AiFillTwitterCircle /></a>
                   <a className='hover:text-teal-300 
-            transition duration-0 hover:duration-150' target='_blank' href="https://www.kevinpowell.co/"><AiOutlineLink /></a>
+                  transition duration-0 hover:duration-150' target='_blank' href="https://www.kevinpowell.co/"><AiOutlineLink /></a>
                 </div>
               </div>
               
-              <div className='max-w-sm max-sm:w-4/5 rounded-lg p-6 shadow-lg dark:bg-sky-900 dark:text-gray-200'>
+              <div className='max-w-xs max-sm:w-4/5 rounded-lg p-6 shadow-lg dark:bg-sky-900 dark:text-gray-200'>
                 <Image src={bob} 
                 className='rounded-lg'
                 width={400}
@@ -223,10 +280,12 @@ export default function Home() {
                 <p>Head of Education at Scrimba, contributor Freecodecamp</p>
                 <div className='flex gap-3 text-3xl mt-3 max-sm:justify-evenly'>
                   <a className='hover:text-teal-300 
-            transition duration-0 hover:duration-150' target='_blank' href="https://twitter.com/bobziroll"><AiFillTwitterCircle /></a>
+                  transition duration-0 hover:duration-150' target='_blank' href="https://www.linkedin.com/in/bobziroll/"><AiFillLinkedin /></a>
                   <a className='hover:text-teal-300 
-            transition duration-0 hover:duration-150' target='_blank' href="https://scrimba.com/teachers/bobziroll"><AiOutlineLink /></a>
-              </div>
+                  transition duration-0 hover:duration-150' target='_blank' href="https://twitter.com/bobziroll"><AiFillTwitterCircle /></a>
+                  <a className='hover:text-teal-300 
+                  transition duration-0 hover:duration-150' target='_blank' href="https://scrimba.com/teachers/bobziroll"><AiOutlineLink /></a>
+                </div>
               </div>
             </div>
         </section>
