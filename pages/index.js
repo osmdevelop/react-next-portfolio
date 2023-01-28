@@ -239,7 +239,7 @@ export default function Home() {
                     height={"100%"} />
               </div>
               <div>
-                <Image src={gcss}
+                <Image src={gjs}
                     className='rounded-lg object-cover'
                     width={"100%"}
                     height={"100%"} />
