@@ -239,7 +239,7 @@ export default function Home() {
                     height={"100%"} />
               </div>
               <div>
-                <Image src={gjs}
+                <Image src={gjsgit init}
                     className='rounded-lg object-cover'
                     width={"100%"}
                     height={"100%"} />
