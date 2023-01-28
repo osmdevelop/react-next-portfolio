@@ -25,8 +25,8 @@ import kevin from '../public/KevinPowell.png'
 import bob from '../public/BobZiroll.png'
 import { useState } from 'react'
 // React reveal
-import Fade from 'react-reveal/Fade';
-import Zoom from 'react-reveal/Zoom';
+// import Fade from 'react-reveal/Fade';
+// import Zoom from 'react-reveal/Zoom';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
@@ -57,9 +57,9 @@ export default function Home() {
           </nav>
           {/* TOP */}
             <div className='text-center md:py-20 p-10'>
-          <Fade top>
+          {/* <Fade top> */}
               <h2 className='text-5xl py-2 text-teal-600 font-medium md:text-6xl max-sm:text-4xl'>Oleh Smolikevych</h2>
-          </Fade>
+          {/* </Fade> */}
               <h3 className='text-2xl py-2 md:text-3xl md:mt-10 dark:text-gray-100'>Front End Developer</h3>
               <p className='text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto dark:text-gray-400'>Front End Developer with passion building web pages and apps with React.js.</p>
             </div>
@@ -89,7 +89,7 @@ export default function Home() {
             </p>
           </div>
           <div className='lg:flex gap-10'>
-            <Fade left>
+            {/* <Fade left> */}
               <div className="text-center shadow-lg p-10 rounded-xl my-10  flex-1 dark:bg-sky-900 dark:text-gray-200 flex flex-col justify-center items-center">
                 <Image src={code} width={100} height={100} />
                 <h3 className='text-lg font-medium pt-8 pb-2'>Front End Development</h3>
@@ -99,8 +99,8 @@ export default function Home() {
                 <p className='text-gray-800 py-1 dark:text-sky-200'>CSS / Tailwind, Bootstrap frameworks</p>
                 <p className='text-gray-800 py-1 dark:text-sky-200'>JS / React.js & package managers</p>
               </div>
-            </Fade>
-            <Fade right>
+            {/* </Fade> */}
+            {/* <Fade right> */}
               <div className="text-center shadow-lg p-10 rounded-xl my-10  flex-1 dark:bg-sky-900 dark:text-gray-200 flex flex-col">
                 <Image src={design} width={100} height={100} className="self-center" />
                 <h3 className='text-lg font-medium pt-8 pb-2'>Creating Web pages using builders & IT Support</h3>
@@ -110,7 +110,7 @@ export default function Home() {
                 <p className='text-gray-800 py-1 dark:text-sky-200'>GoDaddy</p>
                 <p className='text-gray-800 py-1 dark:text-sky-200'>Office 365</p>
               </div>
-            </Fade>
+            {/* </Fade> */}
           </div>
         </section>
         {/* PORTFOLIO */}
@@ -131,7 +131,7 @@ export default function Home() {
           </div>
           {/* PORTFOLIO IMAGES */}
           <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap items-center '>
-            <Zoom>
+            {/* <Zoom> */}
               <div className='basis-1/3 flex-1'>
                 <Image src={web1}
                   className='rounded-lg object-cover'
@@ -144,8 +144,8 @@ export default function Home() {
                   max-sm:text-5xl max-sm:-mt-16 max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-tenzies-game"><AiFillGithub className='-mt-px self-end' />
                 </a>
               </div>
-            </Zoom>
-            <Zoom>
+            {/* </Zoom> */}
+            {/* <Zoom> */}
               <div className='basis-1/3 flex-1'>
                 <Image src={web2}
                   className='rounded-lg object-cover'
@@ -159,8 +159,8 @@ export default function Home() {
                   max-sm:text-5xl max-sm:-mt-16 max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-tenzies-game"><AiFillGithub className='-mt-px self-end' />
                 </a>
               </div>
-            </Zoom>
-            <Zoom>
+            {/* </Zoom> */}
+            {/* <Zoom> */}
               <div className='basis-1/3 flex-1'>
                 <Image src={web3}
                   className='rounded-lg object-cover'
@@ -173,8 +173,8 @@ export default function Home() {
                   max-sm:text-5xl max-sm:-mt-16 max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-tenzies-game"><AiFillGithub className='-mt-px self-end' />
                 </a>
               </div>
-            </Zoom>
-            <Zoom>
+            {/* </Zoom>
+            <Zoom> */}
               <div className='basis-1/3 flex-1'>
                 <Image src={web4}
                   className='rounded-lg object-cover'
@@ -187,8 +187,8 @@ export default function Home() {
                   max-sm:text-5xl max-sm:-mt-16 max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-tenzies-game"><AiFillGithub className='-mt-px self-end' />
                 </a>
               </div>
-            </Zoom>
-            <Zoom>
+            {/* </Zoom>
+            <Zoom> */}
               <div className='basis-1/3 flex-1'>
                 <Image src={web5}
                   className='rounded-lg object-cover'
@@ -201,8 +201,8 @@ export default function Home() {
                     max-sm:text-5xl max-sm:-mt-16 max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-tenzies-game"><AiFillGithub className='-mt-px self-end' />
                   </a>
               </div>
-            </Zoom>
-            <Zoom>
+            {/* </Zoom>
+            <Zoom> */}
               <div className='basis-1/3 flex-1 border'>
                 <Image
                   src={web6}
@@ -217,7 +217,7 @@ export default function Home() {
                 max-sm:text-5xl max-sm:-mt-16 max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-tenzies-game"><AiFillGithub className='-mt-px self-end' />
                   </a>
                 </div>
-            </Zoom>
+            {/* </Zoom> */}
           </div>
         </section>
         {/* Certificates */}
@@ -239,7 +239,7 @@ export default function Home() {
                     height={"100%"} />
               </div>
               <div>
-                <Image src={gjsgit init}
+                <Image src={gjs}
                     className='rounded-lg object-cover'
                     width={"100%"}
                     height={"100%"} />
