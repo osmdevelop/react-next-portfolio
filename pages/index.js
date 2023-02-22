@@ -55,11 +55,11 @@ export default function Home() {
             </ul>
           </nav>
           {/* TOP */}
-            <div className='text-center md:py-20 p-10'>
-              <h2 className='text-5xl py-2 text-teal-600 font-medium md:text-6xl max-sm:text-4xl'>Oleh Smolikevych</h2>
-              <h3 className='text-2xl py-2 md:text-3xl md:mt-10 dark:text-gray-100'>Front End Developer</h3>
-              <p className='text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto dark:text-gray-400'>Front End Developer with passion building web pages and apps with React.js.</p>
-            </div>
+          <div className='text-center md:py-20 p-10'>
+            <h2 className='text-5xl py-2 text-teal-600 font-medium md:text-6xl max-sm:text-4xl'>Oleh Smolikevych</h2>
+            <h3 className='text-2xl py-2 md:text-3xl md:mt-10 dark:text-gray-100'>Front End Developer</h3>
+            <p className='text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto dark:text-gray-400'>Front End Developer with passion building web pages and apps with React.js.</p>
+          </div>
           {/* LINKS */}
           <div className='text-5xl flex justify-center gap-16 py-3 text-gray-600'>
             <a href="https://www.linkedin.com/in/olehsmolikevych/" className='
@@ -86,24 +86,24 @@ export default function Home() {
             </p>
           </div>
           <div className='lg:flex gap-10'>
-              <div className="text-center shadow-lg p-10 rounded-xl my-10  flex-1 dark:bg-sky-900 dark:text-gray-200 flex flex-col justify-center items-center">
-                <Image src={code} width={100} height={100} />
-                <h3 className='text-lg font-medium pt-8 pb-2'>Front End Development</h3>
-                <p className='py-2'>Building user-friendly web pages using modern tools</p>
-                <h4 className='py-4 text-teal-400'>Tools I use</h4>
-                <p className='text-gray-800 py-1 dark:text-sky-200'>HTML</p>
-                <p className='text-gray-800 py-1 dark:text-sky-200'>CSS / Tailwind, Bootstrap frameworks</p>
-                <p className='text-gray-800 py-1 dark:text-sky-200'>JS / React.js & package managers</p>
-              </div>
-              <div className="text-center shadow-lg p-10 rounded-xl my-10  flex-1 dark:bg-sky-900 dark:text-gray-200 flex flex-col">
-                <Image src={design} width={100} height={100} className="self-center" />
-                <h3 className='text-lg font-medium pt-8 pb-2'>Creating Web pages using builders & IT Support</h3>
-                <p className='py-2'>Creating and updating SEO focused web pages with builders. Site hosting. Business email management and providing tech support for proper and effective workflow</p>
-                <h4 className='py-4 text-teal-400'>Tools I use</h4>
-                <p className='text-gray-800 py-1 dark:text-sky-200'>WIX</p>
-                <p className='text-gray-800 py-1 dark:text-sky-200'>GoDaddy</p>
-                <p className='text-gray-800 py-1 dark:text-sky-200'>Office 365</p>
-              </div>
+            <div className="text-center shadow-lg p-10 rounded-xl my-10  flex-1 dark:bg-sky-900 dark:text-gray-200 flex flex-col justify-center items-center">
+              <Image src={code} width={100} height={100} />
+              <h3 className='text-lg font-medium pt-8 pb-2'>Front End Development</h3>
+              <p className='py-2'>Building user-friendly web pages using modern tools</p>
+              <h4 className='py-4 text-teal-400'>Tools I use</h4>
+              <p className='text-gray-800 py-1 dark:text-sky-200'>HTML</p>
+              <p className='text-gray-800 py-1 dark:text-sky-200'>CSS / Tailwind, Bootstrap frameworks</p>
+              <p className='text-gray-800 py-1 dark:text-sky-200'>JS / React.js & package managers</p>
+            </div>
+            <div className="text-center shadow-lg p-10 rounded-xl my-10  flex-1 dark:bg-sky-900 dark:text-gray-200 flex flex-col">
+              <Image src={design} width={100} height={100} className="self-center" />
+              <h3 className='text-lg font-medium pt-8 pb-2'>Creating Web pages using builders & IT Support</h3>
+              <p className='py-2'>Creating and updating SEO focused web pages with builders. Site hosting. Business email management and providing tech support for proper and effective workflow</p>
+              <h4 className='py-4 text-teal-400'>Tools I use</h4>
+              <p className='text-gray-800 py-1 dark:text-sky-200'>WIX</p>
+              <p className='text-gray-800 py-1 dark:text-sky-200'>GoDaddy</p>
+              <p className='text-gray-800 py-1 dark:text-sky-200'>Office 365</p>
+            </div>
           </div>
         </section>
         {/* PORTFOLIO */}
@@ -124,157 +124,160 @@ export default function Home() {
           </div>
           {/* PORTFOLIO IMAGES */}
           <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap items-center '>
-              <div className='basis-1/3 flex-1'>
-                <Image src={web1}
-                  className='rounded-lg object-cover'
-                  width={"100%"}
-                  height={"100%"} />
-                <a className='right-0 text-6xl bg-slate-700 rounded-full
+            <div className='w-96 border'>
+              <a className='text-6xl bg-slate-700 rounded-full
+                text-white  mr-3 p-1 round w-100 
+                hover:text-teal-300 
+                  transition duration-0 hover:duration-150
+                  max-sm:text-5xl max-sm:-mt-16 max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-tenzies-game"><AiFillGithub className='-mt-px self-end' />
+              </a>
+              <Image src={web1}
+                className='rounded-lg object-cover'
+                width={"90px"}
+                height={"90px"} />
+            </div>
+            <div className=''>
+              <Image src={web2}
+                className='rounded-lg object-cover'
+                width={"100%"}
+                height={"100%"}
+              />
+              <a className='right-0 text-6xl bg-slate-700 rounded-full
                 text-white absolute mr-3 p-1 -mt-20 round w-100 
                 hover:text-teal-300 
                   transition duration-0 hover:duration-150
                   max-sm:text-5xl max-sm:-mt-16 max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-tenzies-game"><AiFillGithub className='-mt-px self-end' />
-                </a>
-              </div>
-              <div className='basis-1/3 flex-1'>
-                <Image src={web2}
-                  className='rounded-lg object-cover'
-                  width={"100%"}
-                  height={"100%"}
-                />
-                <a className='right-0 text-6xl bg-slate-700 rounded-full
+              </a>
+            </div>
+            <div className=''>
+              <Image src={web3}
+                className='rounded-lg object-cover'
+                width={"100%"}
+                height={"100%"} />
+              <a className='right-0 text-6xl bg-slate-700 rounded-full
                 text-white absolute mr-3 p-1 -mt-20 round w-100 
                 hover:text-teal-300 
                   transition duration-0 hover:duration-150
                   max-sm:text-5xl max-sm:-mt-16 max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-tenzies-game"><AiFillGithub className='-mt-px self-end' />
-                </a>
-              </div>
-              <div className='basis-1/3 flex-1'>
-                <Image src={web3}
-                  className='rounded-lg object-cover'
-                  width={"100%"}
-                  height={"100%"} />
-                <a className='right-0 text-6xl bg-slate-700 rounded-full
+              </a>
+            </div>
+            <div className=''>
+              <Image src={web4}
+                className='rounded-lg object-cover'
+                width={"100%"}
+                height={"100%"} />
+              <a className='right-0 text-6xl bg-slate-700 rounded-full
                 text-white absolute mr-3 p-1 -mt-20 round w-100 
                 hover:text-teal-300 
                   transition duration-0 hover:duration-150
                   max-sm:text-5xl max-sm:-mt-16 max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-tenzies-game"><AiFillGithub className='-mt-px self-end' />
-                </a>
-              </div>
-              <div className='basis-1/3 flex-1'>
-                <Image src={web4}
-                  className='rounded-lg object-cover'
-                  width={"100%"}
-                  height={"100%"} />
-                  <a className='right-0 text-6xl bg-slate-700 rounded-full
-                text-white absolute mr-3 p-1 -mt-20 round w-100 
-                hover:text-teal-300 
-                  transition duration-0 hover:duration-150
-                  max-sm:text-5xl max-sm:-mt-16 max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-tenzies-game"><AiFillGithub className='-mt-px self-end' />
-                </a>
-              </div>
-              <div className='basis-1/3 flex-1'>
-                <Image src={web5}
-                  className='rounded-lg object-cover'
-                  width={"100%"}
-                  height={"100%"} />
-                <a className='right-0 text-6xl bg-slate-700 rounded-full
+              </a>
+            </div>
+            <div className=''>
+              <Image src={web5}
+                className='rounded-lg object-cover'
+                width={"100%"}
+                height={"100%"} />
+              <a className='right-0 text-6xl bg-slate-700 rounded-full
                 text-white absolute mr-3 p-1 -mt-20 round w-100 
                   hover:text-teal-300 
                     transition duration-0 hover:duration-150
                     max-sm:text-5xl max-sm:-mt-16 max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-tenzies-game"><AiFillGithub className='-mt-px self-end' />
-                  </a>
-              </div>
-              <div className='basis-1/3 flex-1 border'>
-                <Image
-                  src={web6}
-                  className='rounded-lg object-cover'
-                  width={"100%"}
-                  height={"100%"} 
-                  />
-                  <a className='right-0 text-6xl bg-slate-700 rounded-full
+              </a>
+            </div>
+            <div className=' border'>
+              <Image
+                src={web6}
+                className='rounded-lg object-cover'
+                width={"100%"}
+                height={"100%"}
+              >
+
+              </Image>
+              <a className='right-0 text-6xl bg-slate-700 rounded-full
                 text-white absolute mr-3 p-1 -mt-20 round w-100 
                 hover:text-teal-300 
                 transition duration-0 hover:duration-150
-                max-sm:text-5xl max-sm:-mt-16 max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-tenzies-game"><AiFillGithub className='-mt-px self-end' />
-                  </a>
-                </div>
+                max-sm:text-5xl max-sm:-mt-16 max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-tenzies-game">
+                <AiFillGithub className='-mt-px self-end' />
+              </a>
+            </div>
           </div>
         </section>
         {/* Certificates */}
         <section>
+          <div>
+            <h3 className='text-3xl py-1 text-teal-600'>Certificates</h3>
+          </div>
+          <div className='flex gap-3 max-lg:flex-col'>
             <div>
-              <h3 className='text-3xl py-1 text-teal-600'>Certificates</h3>
+              <Image src={gfrontend}
+                className='rounded-lg object-cover'
+                width={"100%"}
+                height={"100%"} />
             </div>
-            <div className='flex gap-3 max-lg:flex-col'>
-              <div>
-                <Image src={gfrontend}
-                    className='rounded-lg object-cover'
-                    width={"100%"}
-                    height={"100%"} />
-              </div>
-              <div>
-                <Image src={gcss}
-                    className='rounded-lg object-cover'
-                    width={"100%"}
-                    height={"100%"} />
-              </div>
-              <div>
-                <Image src={gjs}
-                    className='rounded-lg object-cover'
-                    width={"100%"}
-                    height={"100%"} />
-              </div>
-              <div>
-                <Image src={greact}
-                    className='rounded-lg object-cover'
-                    width={"100%"}
-                    height={"100%"} />
-              </div>
+            <div>
+              <Image src={gcss}
+                className='rounded-lg object-cover'
+                width={"100%"}
+                height={"100%"} />
             </div>
+            <div>
+              <Image src={gjs}
+                className='rounded-lg object-cover'
+                width={"100%"}
+                height={"100%"} />
+            </div>
+            <div>
+              <Image src={greact}
+                className='rounded-lg object-cover'
+                width={"100%"}
+                height={"100%"} />
+            </div>
+          </div>
         </section>
         {/* / Certificates */}
         {/* TUTORS */}
         <section>
-            <div>
-              <h3 className='text-3xl py-1 text-teal-600'>Tutors</h3>
-            </div>
+          <div>
+            <h3 className='text-3xl py-1 text-teal-600'>Tutors</h3>
+          </div>
 
-            <div className='flex flex-col max-md: justify-around max-sm:gap-10   gap-10 py-10 lg:flex-row lg:flex-wrap items-center'>
-              <div className='max-w-xs max-sm:w-4/5 rounded-lg p-6 shadow-lg dark:bg-sky-900 dark:text-gray-200'>
-                <Image src={kevin} 
+          <div className='flex flex-col max-md: justify-around max-sm:gap-10   gap-10 py-10 lg:flex-row lg:flex-wrap items-center'>
+            <div className='max-w-xs max-sm:w-4/5 rounded-lg p-6 shadow-lg dark:bg-sky-900 dark:text-gray-200'>
+              <Image src={kevin}
                 className='rounded-lg'
                 width={300}
                 height={300} />
-                <h4 className='text-2xl mt-3 max-sm:text-xl'>Kevin Powell | <span className='text-teal-400'>CSS</span></h4>
-                <p>CSS Evangelist. Teacher, Youtube content creator with over 600k subscribers</p>
-                <div className='flex gap-3 text-3xl max-sm:justify-evenly mt-3'>
-                  <a className='hover:text-teal-300 
+              <h4 className='text-2xl mt-3 max-sm:text-xl'>Kevin Powell | <span className='text-teal-400'>CSS</span></h4>
+              <p>CSS Evangelist. Teacher, Youtube content creator with over 600k subscribers</p>
+              <div className='flex gap-3 text-3xl max-sm:justify-evenly mt-3'>
+                <a className='hover:text-teal-300 
                   transition duration-0 hover:duration-150' target='_blank' href="https://www.youtube.com/@KevinPowell"><AiFillYoutube /></a>
-                  <a className='hover:text-teal-300 
+                <a className='hover:text-teal-300 
                   transition duration-0 hover:duration-150' target='_blank' href="https://twitter.com/KevinJPowell"><AiFillTwitterCircle /></a>
-                  <a className='hover:text-teal-300 
+                <a className='hover:text-teal-300 
                   transition duration-0 hover:duration-150' target='_blank' href="https://www.kevinpowell.co/"><AiOutlineLink /></a>
-                </div>
               </div>
-              
-              <div className='max-w-xs max-sm:w-4/5 rounded-lg p-6 shadow-lg dark:bg-sky-900 dark:text-gray-200'>
-                <Image src={bob} 
+            </div>
+
+            <div className='max-w-xs max-sm:w-4/5 rounded-lg p-6 shadow-lg dark:bg-sky-900 dark:text-gray-200'>
+              <Image src={bob}
                 className='rounded-lg'
                 width={400}
                 height={400} />
-                <h4 className='text-2xl mt-3 max-sm:text-xl'>Bob Ziroll | <span className='text-teal-400'>React</span></h4>
-                <p>Head of Education at Scrimba, contributor Freecodecamp</p>
-                <div className='flex gap-3 text-3xl mt-3 max-sm:justify-evenly'>
-                  <a className='hover:text-teal-300 
+              <h4 className='text-2xl mt-3 max-sm:text-xl'>Bob Ziroll | <span className='text-teal-400'>React</span></h4>
+              <p>Head of Education at Scrimba, contributor Freecodecamp</p>
+              <div className='flex gap-3 text-3xl mt-3 max-sm:justify-evenly'>
+                <a className='hover:text-teal-300 
                   transition duration-0 hover:duration-150' target='_blank' href="https://www.linkedin.com/in/bobziroll/"><AiFillLinkedin /></a>
-                  <a className='hover:text-teal-300 
+                <a className='hover:text-teal-300 
                   transition duration-0 hover:duration-150' target='_blank' href="https://twitter.com/bobziroll"><AiFillTwitterCircle /></a>
-                  <a className='hover:text-teal-300 
+                <a className='hover:text-teal-300 
                   transition duration-0 hover:duration-150' target='_blank' href="https://scrimba.com/teachers/bobziroll"><AiOutlineLink /></a>
-                </div>
               </div>
             </div>
+          </div>
         </section>
       </main>
     </div>
