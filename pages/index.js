@@ -124,29 +124,40 @@ export default function Home() {
           </div>
           {/* PORTFOLIO IMAGES */}
           <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap items-center '>
-            <div className='w-96 border'>
-              <a className='text-6xl bg-slate-700 rounded-full
-                text-white  mr-3 p-1 round w-100 
-                hover:text-teal-300 
-                  transition duration-0 hover:duration-150
-                  max-sm:text-5xl max-sm:-mt-16 max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-tenzies-game"><AiFillGithub className='-mt-px self-end' />
-              </a>
+
+            <div className='lg:w-2/4 relative'>
               <Image src={web1}
                 className='rounded-lg object-cover'
-                width={"90px"}
-                height={"90px"} />
+                width={"100%"}
+                height={"100%"}
+              />
+              <div className='flex gap-4 absolute bottom-0 right-0 bg-slate-700 rounded-tl-lg w-100'>
+                <a className=' text-5xl 
+                  text-white p-1.5  
+                  hover:text-teal-300 
+                    transition duration-0 hover:duration-150
+                    max-sm:text-5xl max-sm:-mt-16 max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-tenzies-game"><AiFillGithub className='' />
+                </a>
+                <a className=' text-5xl 
+                  text-white p-1.5  
+                  hover:text-teal-300 
+                    transition duration-0 hover:duration-150
+                    max-sm:text-5xl max-sm:-mt-16 max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-tenzies-game"><AiOutlineLink className='' />
+                </a>
+              </div>
             </div>
-            <div className=''>
+
+            <div className='lg:w-2/4 relative'>
               <Image src={web2}
                 className='rounded-lg object-cover'
                 width={"100%"}
                 height={"100%"}
               />
-              <a className='right-0 text-6xl bg-slate-700 rounded-full
-                text-white absolute mr-3 p-1 -mt-20 round w-100 
+              <a className='absolute bottom-0 right-0 text-5xl bg-slate-700
+                text-white p-1.5  rounded-tl-lg w-100 
                 hover:text-teal-300 
                   transition duration-0 hover:duration-150
-                  max-sm:text-5xl max-sm:-mt-16 max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-tenzies-game"><AiFillGithub className='-mt-px self-end' />
+                  max-sm:text-5xl max-sm:-mt-16 max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-tenzies-game"><AiFillGithub className='self-end' />
               </a>
             </div>
             <div className=''>
