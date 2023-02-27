@@ -355,7 +355,7 @@ export default function Home() {
         <footer className='bg-white px-10 pb-16 pt-6 max-sm:px-5 md:px-20 lg:px-40 dark:bg-sky-900 max-sm:pb-10'>
           <div>
             <h3 className='text-3xl py-1 text-teal-400'>Contact me</h3>
-          <div className='shadow-lg dark:bg-sky-900 dark:shadow-none flex justify-center gap-3 items-center text-4xl text-teal-300 mt-6 max-sm:mt-5'>
+          <div className='dark:bg-sky-900 flex justify-center gap-3 items-center text-4xl text-teal-300 mt-6 max-sm:mt-5'>
             <AiOutlineMail className='dark:bg-sky-800 p-1 rounded-md text-6xl max-md:text-4xl max-ms:text-xl'/>
             <a id='contact' className='hover:text-teal-500 duration-200 max-md:text-3xl max-sm:text-xl' href="mailto: oleh@osmdevelop.com" target="_blank" rel="noopener noreferrer">
               oleh@osmdevelop.com
