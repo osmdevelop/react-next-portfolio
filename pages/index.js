@@ -5,7 +5,8 @@ import {
   AiFillLinkedin,
   AiFillGithub,
   AiFillYoutube,
-  AiOutlineLink
+  AiOutlineLink,
+  AiOutlineMail
 } from 'react-icons/ai'
 import Image from 'next/image'
 import design from '../public/design.png'
@@ -48,10 +49,16 @@ export default function Home() {
               <li>
                 <BsSun onClick={() => setDarkMode(!darkMode)} className='cursor-pointer text-2xl dark:text-white' />
               </li>
-              {/* <li>
-                <a className='bg-gradient-to-r from-cyan-500 to-teal-500 bg-cyan-500 text-white px-4 py-2 rounded-md ml-8 hover:from-cyan-500 to-teal-500 bg-cyan-500 transition duration-0 hover:duration-150'>Resume</a>
-              </li> */}
-            </ul>
+              <li>
+                <a href='#contact' className='bg-gradient-to-r from-cyan-500 to-teal-500 bg-cyan-500 text-white px-4 py-2 rounded-md ml-8 hover:from-cyan-500 to-teal-500 bg-cyan-500 transition duration-0 hover:duration-150'>Contact</a>
+              </li>
+              </ul>
+              {/* <h3 className='flex items-center text-teal-500'>
+                <AiOutlineMail className='p-1 text-3xl'/>
+                <a className='hover:text-teal-600 duration-200' href="mailto: oleh@osmdevelop.com" target="_blank" rel="noopener noreferrer">
+                  oleh@osmdevelop.com
+                </a>
+              </h3> */}
           </nav>
           {/* TOP */}
           <div className='text-center md:py-20 p-10'>
@@ -343,7 +350,19 @@ export default function Home() {
             </div>
           </div>
         </section>
+        {/* Contact */}
       </main>
+        <footer className='bg-white px-10 pb-16 pt-6 max-sm:px-5 md:px-20 lg:px-40 dark:bg-sky-900 max-sm:pb-10'>
+          <div>
+            <h3 className='text-3xl py-1 text-teal-400'>Contact me</h3>
+          <div className='shadow-lg dark:bg-sky-900 dark:shadow-none flex justify-center gap-3 items-center text-4xl text-teal-300 mt-6 max-sm:mt-5'>
+            <AiOutlineMail className='dark:bg-sky-800 p-1 rounded-md text-6xl max-md:text-4xl max-ms:text-xl'/>
+            <a id='contact' className='hover:text-teal-500 duration-200 max-md:text-3xl max-sm:text-xl' href="mailto: oleh@osmdevelop.com" target="_blank" rel="noopener noreferrer">
+              oleh@osmdevelop.com
+            </a>
+          </div>
+          </div>
+        </footer>
     </div>
   )
 }
