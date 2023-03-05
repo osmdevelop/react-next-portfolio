@@ -233,13 +233,13 @@ export default function Home() {
                   text-white p-1.5  
                   hover:text-teal-300 
                     transition duration-0 hover:duration-150
-                    max-sm:text-5xl max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-speed-typing-game"><AiFillGithub className='' />
+                    max-sm:text-5xl max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-speed-typing-game"><AiFillGithub />
                 </a>
                 <a className='text-5xl 
                   text-white p-1.5  
                   hover:text-teal-300 
                     transition duration-0 hover:duration-150
-                    max-sm:text-5xl max-sm:mr-1.5' target='_blank' href="https://osmdevelop.github.io/react-speed-typing-game/"><AiOutlineLink className='' />
+                    max-sm:text-5xl max-sm:mr-1.5' target='_blank' href="https://osmdevelop.github.io/react-speed-typing-game/"><AiOutlineLink />
                 </a>
               </div>
             </div>
@@ -255,13 +255,13 @@ export default function Home() {
                   text-white p-1.5  
                   hover:text-teal-300 
                     transition duration-0 hover:duration-150
-                    max-sm:text-5xl  max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-travel-journal"><AiFillGithub className='' />
+                    max-sm:text-5xl  max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-travel-journal"><AiFillGithub />
                 </a>
                 <a className=' text-5xl 
                   text-white p-1.5  
                   hover:text-teal-300 
                     transition duration-0 hover:duration-150
-                    max-sm:text-5xl  max-sm:mr-1.5' target='_blank' href="https://osmdevelop.github.io/react-travel-journal/"><AiOutlineLink className='' />
+                    max-sm:text-5xl  max-sm:mr-1.5' target='_blank' href="https://osmdevelop.github.io/react-travel-journal/"><AiOutlineLink />
                 </a>
               </div>
             </div>
@@ -273,37 +273,49 @@ export default function Home() {
             <h3 className='text-3xl py-1 text-teal-600'>Certificates</h3>
           </div>
           <div className='flex gap-6 max-lg:flex-col m-3'>
-            <div className='transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-225'>
-              <a href='https://scrimba.com/certificate/uqQa4Rcq/gfrontend' target='_blank'>
-                <Image src={gfrontend}
-                  className='rounded-lg object-cover'
-                  width={"100%"}
-                  height={"100%"} />
-              </a>
+            <div>
+              <div className='transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-225'>
+                <a href='https://scrimba.com/certificate/uqQa4Rcq/gfrontend' target='_blank'>
+                  <Image src={gfrontend}
+                    className='rounded-lg object-cover'
+                    width={"100%"}
+                    height={"100%"} />
+                </a>
+              </div>
+              <p className='text-base py-1 text-teal-600'>Front End Developer Career Path</p>
             </div>
-            <div className='transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-225'>
-              <a href='https://scrimba.com/certificate/uqQa4Rcq/gresponsive' target='_blank'>
-                <Image src={gcss}
-                  className='rounded-lg object-cover'
-                  width={"100%"}
-                  height={"100%"} />
-              </a>
+            <div>
+              <div className='transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-225'>
+                <a href='https://scrimba.com/certificate/uqQa4Rcq/gresponsive' target='_blank'>
+                  <Image src={gcss}
+                    className='rounded-lg object-cover'
+                    width={"100%"}
+                    height={"100%"} />
+                </a>
+              </div>
+              <p className='text-base py-1 text-teal-600'>Responsive Web Design</p>
             </div>
-            <div className='transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-225'>
-              <a href='https://scrimba.com/certificate/uqQa4Rcq/gjavascript' target='_blank'>
-                <Image src={gjs}
-                  className='rounded-lg object-cover'
-                  width={"100%"}
-                  height={"100%"} />
-              </a>
+            <div>
+              <div className='transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-225'>
+                <a href='https://scrimba.com/certificate/uqQa4Rcq/gjavascript' target='_blank'>
+                  <Image src={gjs}
+                    className='rounded-lg object-cover'
+                    width={"100%"}
+                    height={"100%"} />
+                </a>
+              </div>
+              <p className='text-base py-1 text-teal-600'>JavaScript Deep Dive</p>
             </div>
-            <div className='transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-225'>
-              <a href='https://scrimba.com/certificate/uqQa4Rcq/greact' target='_blank'>
-                <Image src={greact}
-                  className='rounded-lg object-cover'
-                  width={"100%"}
-                  height={"100%"} />
-              </a>
+            <div>
+              <div className='transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-225'>
+                <a href='https://scrimba.com/certificate/uqQa4Rcq/greact' target='_blank'>
+                  <Image src={greact}
+                    className='rounded-lg object-cover'
+                    width={"100%"}
+                    height={"100%"} />
+                </a>
+              </div>
+            <p className='text-base py-1 text-teal-600'>React Bootcamp</p>
             </div>
           </div>
         </section>
