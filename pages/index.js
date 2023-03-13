@@ -17,6 +17,8 @@ import web3 from '../public/web3.png'
 import web4 from '../public/web4.png'
 import web5 from '../public/web5.png'
 import web6 from '../public/web6.png'
+import web7 from '../public/web7.png'
+import web8 from '../public/web8.png'
 
 import gfrontend from '../public/gfrontend.png'
 import gcss from '../public/gcss.png'
@@ -50,15 +52,9 @@ export default function Home() {
                 <BsSun onClick={() => setDarkMode(!darkMode)} className='cursor-pointer text-2xl dark:text-white' />
               </li>
               <li>
-                <a href='#contact' className='bg-gradient-to-r from-cyan-500 to-teal-500 bg-cyan-500 text-white px-4 py-2 rounded-md ml-8 hover:from-cyan-500 to-teal-500 bg-cyan-500 transition duration-0 hover:duration-150'>Contact</a>
+                <a href='#contact' className='bg-gradient-to-r from-cyan-500 to-teal-500 bg-cyan-500 text-white px-4 py-2 rounded-md ml-8 hover:from-cyan-500 transition duration-0 hover:duration-150'>Contact</a>
               </li>
               </ul>
-              {/* <h3 className='flex items-center text-teal-500'>
-                <AiOutlineMail className='p-1 text-3xl'/>
-                <a className='hover:text-teal-600 duration-200' href="mailto: oleh@osmdevelop.com" target="_blank" rel="noopener noreferrer">
-                  oleh@osmdevelop.com
-                </a>
-              </h3> */}
           </nav>
           {/* TOP */}
           <div className='text-center md:py-20 p-10'>
@@ -120,14 +116,6 @@ export default function Home() {
             {/* <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
               Some random text
               </p> */}
-            {/* <span className="text-teal-500"> agencies </span>
-              consulted for <span className="text-teal-500">startups </span>
-              and collaborated with talented people to create digital products
-              for both business and consumer use. */}
-            {/* <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              I offer from a wide range of services, including brand design,
-              programming and teaching.
-            </p> */}
           </div>
           {/* PORTFOLIO IMAGES */}
           <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap items-center justify-between lg:justify-center'>
@@ -265,6 +253,51 @@ export default function Home() {
                 </a>
               </div>
             </div>
+
+            {/* <div className='max-w-3xl relative'>
+              <Image src={web7}
+                className='rounded-lg object-cover'
+                width={"100%"}
+                height={"100%"}
+              />
+              <div className='flex gap-4 absolute bottom-0 right-0 bg-slate-700 rounded-tl-lg w-100'>
+                <a className=' text-5xl 
+                  text-white p-1.5  
+                  hover:text-teal-300 
+                    transition duration-0 hover:duration-150
+                    max-sm:text-5xl  max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-travel-journal"><AiFillGithub />
+                </a>
+                <a className=' text-5xl 
+                  text-white p-1.5  
+                  hover:text-teal-300 
+                    transition duration-0 hover:duration-150
+                    max-sm:text-5xl  max-sm:mr-1.5' target='_blank' href="https://osmdevelop.github.io/react-travel-journal/"><AiOutlineLink />
+                </a>
+              </div>
+            </div> */}
+
+            <div className='max-w-3xl relative'>
+              <Image src={web8}
+                className='rounded-lg object-cover'
+                width={"100%"}
+                height={"100%"}
+              />
+              <div className='flex gap-4 absolute bottom-0 right-0 bg-slate-700 rounded-tl-lg w-100'>
+                <a className=' text-5xl 
+                  text-white p-1.5  
+                  hover:text-teal-300 
+                    transition duration-0 hover:duration-150
+                    max-sm:text-5xl  max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/momentum-clone/"><AiFillGithub />
+                </a>
+                <a className=' text-5xl 
+                  text-white p-1.5  
+                  hover:text-teal-300 
+                    transition duration-0 hover:duration-150
+                    max-sm:text-5xl  max-sm:mr-1.5' target='_blank' href="https://osmdevelop.github.io/momentum-clone/"><AiOutlineLink />
+                </a>
+              </div>
+            </div>
+
           </div>
         </section>
         {/* Certificates */}
