@@ -54,7 +54,7 @@ export default function Home() {
               <li>
                 <a href='#contact' className='bg-gradient-to-r from-cyan-500 to-teal-500 bg-cyan-500 text-white px-4 py-2 rounded-md ml-8 hover:from-cyan-500 transition duration-0 hover:duration-150'>Contact</a>
               </li>
-              </ul>
+            </ul>
           </nav>
           {/* TOP */}
           <div className='text-center md:py-20 p-10'>
@@ -63,16 +63,13 @@ export default function Home() {
             <p className='text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto dark:text-gray-400'>Front End Developer with passion building web pages and apps with React.js.</p>
           </div>
           {/* LINKS */}
-          <div className='text-5xl flex justify-center gap-16 py-3 text-gray-600'>
+          <div className='text-6xl flex justify-center gap-16 py-3 text-gray-600'>
             <a href="https://www.linkedin.com/in/olehsmolikevych/" target='_blank' className='
             hover:text-teal-300 
             transition duration-0 hover:duration-150'><AiFillLinkedin /></a>
             <a href="https://www.github.com/osmdevelop" target='_blank' className='
             hover:text-teal-300 
             transition duration-0 hover:duration-150'><AiFillGithub /></a>
-            <a href="https://www.twitter.com/OlehSml" target='_blank' className='
-            hover:text-teal-300 
-            transition duration-0 hover:duration-150'><AiFillTwitterCircle /></a>
           </div>
         </section>
         {/* SERVICES */}
@@ -348,7 +345,7 @@ export default function Home() {
                     height={"100%"} />
                 </a>
               </div>
-            <p className='text-base py-1 text-teal-600'>React Bootcamp</p>
+              <p className='text-base py-1 text-teal-600'>React Bootcamp</p>
             </div>
           </div>
         </section>
@@ -397,17 +394,17 @@ export default function Home() {
         </section>
         {/* Contact */}
       </main>
-        <footer className='bg-white px-10 pb-16 pt-6 max-sm:px-5 md:px-20 lg:px-40 dark:bg-sky-900 max-sm:pb-10'>
-          <div>
-            <h3 className='text-3xl py-1 text-teal-400'>Contact me</h3>
+      <footer className='bg-white px-10 pb-16 pt-6 max-sm:px-5 md:px-20 lg:px-40 dark:bg-sky-900 max-sm:pb-10'>
+        <div>
+          <h3 className='text-3xl py-1 text-teal-400'>Contact me</h3>
           <div className='dark:bg-sky-900 flex justify-center gap-3 items-center text-4xl text-teal-300 mt-6 max-sm:mt-5'>
-            <AiOutlineMail className='dark:bg-sky-800 p-1 rounded-md text-6xl max-md:text-4xl max-ms:text-xl'/>
+            <AiOutlineMail className='dark:bg-sky-800 p-1 rounded-md text-6xl max-md:text-4xl max-ms:text-xl' />
             <a id='contact' className='hover:text-teal-500 duration-200 max-md:text-3xl max-sm:text-xl' href="mailto: oleh@osmdevelop.com" target="_blank" rel="noopener noreferrer">
               oleh@osmdevelop.com
             </a>
           </div>
-          </div>
-        </footer>
+        </div>
+      </footer>
     </div>
   )
 }
