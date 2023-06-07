@@ -19,6 +19,7 @@ import web5 from '../public/web5.png'
 import web6 from '../public/web6.png'
 import web7 from '../public/web7.png'
 import web8 from '../public/web8.png'
+import Link from 'next/link'
 
 import gfrontend from '../public/gfrontend.png'
 import gcss from '../public/gcss.png'
@@ -47,12 +48,18 @@ export default function Home() {
 
           <nav className='py-10 mb-12 flex justify-between'>
             <h1 className='text-xl font-burtons dark:text-teal-500'>osmdevelop</h1>
-            <ul className='flex items-center'>
+            <ul className='flex items-center w-56 justify-around'>
               <li>
                 <BsSun onClick={() => setDarkMode(!darkMode)} className='cursor-pointer text-2xl dark:text-white' />
               </li>
               <li>
-                <a href='#contact' className='bg-gradient-to-r from-cyan-500 to-teal-500 bg-cyan-500 text-white px-4 py-2 rounded-md ml-8 hover:from-cyan-500 transition duration-0 hover:duration-150'>Contact</a>
+                <a href="#contact" className="flex hover:text-teal-300 dark:text-white 0 text-2xl transition duration-0 hover:duration-150">
+                  <AiOutlineMail />
+                </a>
+              </li>
+              <li>
+                <a href="/Oleh's resume.pdf" className='bg-gradient-to-r from-cyan-500 to-teal-500 bg-cyan-500 text-white px-4 py-2 rounded-md hover:from-cyan-500 transition duration-0 hover:duration-150'
+                >Resume</a>
               </li>
             </ul>
           </nav>
