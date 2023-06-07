@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { motion } from "framer-motion"
 import { BsSun } from 'react-icons/bs'
 import {
   AiFillTwitterCircle,
@@ -33,6 +34,8 @@ import { useState } from 'react'
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
 
+  // motion
+
   return (
     <div className={darkMode ? "dark" : ""}>
       {/* HEADER */}
@@ -64,20 +67,28 @@ export default function Home() {
             </ul>
           </nav>
           {/* TOP */}
-          <div className='text-center md:py-20 p-10'>
-            <h2 className='text-5xl py-2 text-teal-600 font-medium md:text-6xl max-sm:text-4xl'>Oleh Smolikevych</h2>
-            <h3 className='text-2xl py-2 md:text-3xl md:mt-10 dark:text-gray-100'>Front End Developer</h3>
-            <p className='text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto dark:text-gray-400'>Front End Developer with passion building web pages and apps with React.js.</p>
-          </div>
-          {/* LINKS */}
-          <div className='text-6xl flex justify-center gap-16 py-3 text-gray-600'>
-            <a href="https://www.linkedin.com/in/olehsmolikevych/" target='_blank' className='
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, y: -35 }}
+            transition={{
+              duration: 0.8,
+            }}
+          >
+            <div className='text-center md:py-20 p-10'>
+              <h2 className='text-5xl py-2 text-teal-600 font-medium md:text-6xl max-sm:text-4xl'>Oleh Smolikevych</h2>
+              <h3 className='text-2xl py-2 md:text-3xl md:mt-10 dark:text-gray-100'>Front End Developer</h3>
+              <p className='text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto dark:text-gray-400'>Front End Developer with passion building web pages and apps with React.js.</p>
+            </div>
+            {/* LINKS */}
+            <div className='text-6xl flex justify-center gap-16 py-3 text-gray-600'>
+              <a href="https://www.linkedin.com/in/olehsmolikevych/" target='_blank' className='
             hover:text-teal-300 
             transition duration-0 hover:duration-150'><AiFillLinkedin /></a>
-            <a href="https://www.github.com/osmdevelop" target='_blank' className='
+              <a href="https://www.github.com/osmdevelop" target='_blank' className='
             hover:text-teal-300 
             transition duration-0 hover:duration-150'><AiFillGithub /></a>
-          </div>
+            </div>
+          </motion.div>
         </section>
         {/* SERVICES */}
         <section>
@@ -92,173 +103,211 @@ export default function Home() {
             </p>
           </div>
           <div className='lg:flex gap-10'>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10  flex-1 dark:bg-sky-900 dark:text-gray-200 flex flex-col justify-center items-center">
-              <Image src={code} width={100} height={100} />
-              <h3 className='text-lg font-medium pt-8 pb-2'>Front End Development</h3>
-              <p className='py-2'>Building user-friendly web pages using modern tools</p>
-              <h4 className='text-xl py-4 text-teal-400'>Tools I use</h4>
-              <p className='text-lg text-gray-800 py-1 dark:text-sky-200'>HTML</p>
-              <p className='text-lg text-gray-800 py-1 dark:text-sky-200'>CSS / Tailwind, Bootstrap frameworks</p>
-              <p className='text-xl text-gray-800 py-1 dark:text-sky-200'>JS / React.js, Next.js, other libraries and frameworks</p>
+            <div className='flex-1'>
+              <motion.div
+                initial="offscreen"
+                whileInView={{ x: [-200, 30], y: 0, scale: 1 }}
+                viewport={{ once: true }}
+
+                transition={{
+                  duration: 0.8,
+                }}
+              >
+                <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-sky-900 dark:text-gray-200 flex flex-col justify-center items-center">
+                  <Image src={code} width={100} height={100} />
+                  <h3 className='text-lg font-medium pt-8 pb-2'>Front End Development</h3>
+                  <p className='py-2'>Building user-friendly web pages using modern tools</p>
+                  <h4 className='text-xl py-4 text-teal-400'>Tools I use</h4>
+                  <p className='text-lg text-gray-800 py-1 dark:text-sky-200'>HTML</p>
+                  <p className='text-lg text-gray-800 py-1 dark:text-sky-200'>CSS / Tailwind, Bootstrap frameworks</p>
+                  <p className='text-xl text-gray-800 py-1 dark:text-sky-200'>JS / React.js, Next.js, other libraries and frameworks</p>
+                </div>
+              </motion.div>
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10  flex-1 dark:bg-sky-900 dark:text-gray-200 flex flex-col">
-              <Image src={design} width={100} height={100} className="self-center" />
-              <h3 className='text-lg font-medium pt-8 pb-2'>Creating Web pages using builders & IT Support</h3>
-              <p className='py-2'>Creating and updating SEO focused web pages with builders. Site hosting. Business email management and providing tech support for proper and effective workflow</p>
-              <h4 className='text-lg py-4 text-teal-400'>Tools I use</h4>
-              <p className='text-lg text-gray-800 py-1 dark:text-sky-200'>WIX</p>
-              <p className='text-lg text-gray-800 py-1 dark:text-sky-200'>GoDaddy</p>
-              <p className='text-lg text-gray-800 py-1 dark:text-sky-200'>Netlify</p>
-              <p className='text-lg text-gray-800 py-1 dark:text-sky-200'>Office 365</p>
+            <div className='flex-1'>
+              <motion.div
+                initial="offscreen"
+                whileInView={{ x: [200, 30], y: 0, scale: 1 }}
+                viewport={{ once: true }}
+
+                transition={{
+                  duration: 0.8,
+                }}
+              >
+                <div className="text-center shadow-lg p-10 rounded-xl my-10  flex-1 dark:bg-sky-900 dark:text-gray-200 flex flex-col">
+                  <Image src={design} width={100} height={100} className="self-center" />
+                  <h3 className='text-lg font-medium pt-8 pb-2'>Creating Web pages using builders & IT Support</h3>
+                  <p className='py-2'>Creating and updating SEO focused web pages with builders. Site hosting. Business email management and providing tech support for proper and effective workflow</p>
+                  <h4 className='text-lg py-4 text-teal-400'>Tools I use</h4>
+                  <p className='text-lg text-gray-800 py-1 dark:text-sky-200'>WIX</p>
+                  <p className='text-lg text-gray-800 py-1 dark:text-sky-200'>GoDaddy</p>
+                  <p className='text-lg text-gray-800 py-1 dark:text-sky-200'>Netlify</p>
+                  <p className='text-lg text-gray-800 py-1 dark:text-sky-200'>Office 365</p>
+                </div>
+              </motion.div>
             </div>
           </div>
         </section>
         {/* PORTFOLIO */}
         <section>
           <div>
-            <h3 className='text-3xl py-1 text-teal-600'>Portfolio</h3>
+            <motion.div
+              initial="offscreen"
+              whileInView={{ x: [-200, 100], y: 26, scale: 1 }}
+              transition={{
+                duration: 0.8,
+              }}
+            >
+              <h3 className='text-3xl py-1 text-teal-600'>Portfolio</h3></motion.div>
             {/* <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
               Some random text
               </p> */}
           </div>
           {/* PORTFOLIO IMAGES */}
-          <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap items-center justify-between lg:justify-center'>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.8,
+            }}
+          >
+            <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap items-center justify-between lg:justify-center'>
 
-            <div className='lg:w-2/4 max-w-3xl relative'>
-              <Image src={web1}
-                className='rounded-lg object-cover'
-                width={"100%"}
-                height={"100%"}
-              />
-              <div className='flex gap-4 absolute bottom-0 right-0 bg-slate-700 rounded-tl-lg w-100'>
-                <a className=' text-5xl 
+              <div className='lg:w-2/4 max-w-3xl relative'>
+                <Image src={web1}
+                  className='rounded-lg object-cover'
+                  width={"100%"}
+                  height={"100%"}
+                />
+                <div className='flex gap-4 absolute bottom-0 right-0 bg-slate-700 rounded-tl-lg w-100'>
+                  <a className=' text-5xl 
                   text-white p-1.5  
                   hover:text-teal-300 
                     transition duration-0 hover:duration-150
                     max-sm:text-5xl' target='_blank' href="https://github.com/osmdevelop/space-travel">
-                  <AiFillGithub className='' />
-                </a>
-                <a className=' text-5xl 
+                    <AiFillGithub className='' />
+                  </a>
+                  <a className=' text-5xl 
                   text-white p-1.5  
                   hover:text-teal-300 
                     transition duration-0 hover:duration-150
                     max-sm:text-5xl' target='_blank' href="https://osmdevelop.github.io/space-travel/">
-                  <AiOutlineLink className='' />
-                </a>
+                    <AiOutlineLink className='' />
+                  </a>
+                </div>
               </div>
-            </div>
 
-            <div className='lg:w-2/4 max-w-3xl relative'>
-              <Image src={web2}
-                className='rounded-lg object-cover'
-                width={"100%"}
-                height={"100%"}
-              />
-              <div className='flex gap-4 absolute bottom-0 right-0 bg-slate-700 rounded-tl-lg w-100'>
-                <a className=' text-5xl 
+              <div className='lg:w-2/4 max-w-3xl relative'>
+                <Image src={web2}
+                  className='rounded-lg object-cover'
+                  width={"100%"}
+                  height={"100%"}
+                />
+                <div className='flex gap-4 absolute bottom-0 right-0 bg-slate-700 rounded-tl-lg w-100'>
+                  <a className=' text-5xl 
                   text-white p-1.5  
                   hover:text-teal-300 
                     transition duration-0 hover:duration-150
                     max-sm:text-5xl  max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-tenzies-game"><AiFillGithub className='' />
-                </a>
-                <a className='text-5xl 
+                  </a>
+                  <a className='text-5xl 
                   text-white p-1.5  
                   hover:text-teal-300 
                     transition duration-0 hover:duration-150
                     max-sm:text-5xl  max-sm:mr-1.5' target='_blank' href="https://osmdevelop.github.io/react-tenzies-game/"><AiOutlineLink className='' />
-                </a>
+                  </a>
+                </div>
               </div>
-            </div>
 
-            <div className='max-w-2xl relative'>
-              <Image src={web3}
-                className='rounded-lg object-cover'
-                width={"100%"}
-                height={"100%"}
-              />
-              <div className='flex gap-4 absolute bottom-0 right-0 bg-slate-700 rounded-tl-lg w-100'>
-                <a className=' text-5xl 
+              <div className='max-w-2xl relative'>
+                <Image src={web3}
+                  className='rounded-lg object-cover'
+                  width={"100%"}
+                  height={"100%"}
+                />
+                <div className='flex gap-4 absolute bottom-0 right-0 bg-slate-700 rounded-tl-lg w-100'>
+                  <a className=' text-5xl 
                   text-white p-1.5  
                   hover:text-teal-300 
                     transition duration-0 hover:duration-150
                     max-sm:text-5xl  max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-movie-search"><AiFillGithub className='' />
-                </a>
-                <a className=' text-5xl 
+                  </a>
+                  <a className=' text-5xl 
                   text-white p-1.5  
                   hover:text-teal-300 
                     transition duration-0 hover:duration-150
                     max-sm:text-5xl  max-sm:mr-1.5' target='_blank' href="https://osmdevelop.github.io/react-movie-search/"><AiOutlineLink className='' />
-                </a>
+                  </a>
+                </div>
               </div>
-            </div>
 
-            <div className='max-w-3xl relative'>
-              <Image src={web4}
-                className='rounded-lg object-cover'
-                width={"100%"}
-                height={"100%"}
-              />
-              <div className='flex gap-4 absolute bottom-0 right-0 bg-slate-700 rounded-tl-lg w-100'>
-                <a className='text-5xl 
+              <div className='max-w-3xl relative'>
+                <Image src={web4}
+                  className='rounded-lg object-cover'
+                  width={"100%"}
+                  height={"100%"}
+                />
+                <div className='flex gap-4 absolute bottom-0 right-0 bg-slate-700 rounded-tl-lg w-100'>
+                  <a className='text-5xl 
                   text-white p-1.5  
                   hover:text-teal-300 
                     transition duration-0 hover:duration-150
                     max-sm:text-5xl max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/capital-hungry"><AiFillGithub className='' />
-                </a>
-                <a className='text-5xl 
+                  </a>
+                  <a className='text-5xl 
                   text-white p-1.5  
                   hover:text-teal-300 
                     transition duration-0 hover:duration-150
                     max-sm:text-5xl max-sm:mr-1.5' target='_blank' href="https://osmdevelop.github.io/capital-hungry/"><AiOutlineLink className='' />
-                </a>
+                  </a>
+                </div>
               </div>
-            </div>
 
-            <div className='max-w-3xl relative'>
-              <Image src={web5}
-                className='rounded-lg object-cover'
-                width={"100%"}
-                height={"100%"}
-              />
-              <div className='flex gap-4 absolute bottom-0 right-0 bg-slate-700 rounded-tl-lg w-100'>
-                <a className='text-5xl 
+              <div className='max-w-3xl relative'>
+                <Image src={web5}
+                  className='rounded-lg object-cover'
+                  width={"100%"}
+                  height={"100%"}
+                />
+                <div className='flex gap-4 absolute bottom-0 right-0 bg-slate-700 rounded-tl-lg w-100'>
+                  <a className='text-5xl 
                   text-white p-1.5  
                   hover:text-teal-300 
                     transition duration-0 hover:duration-150
                     max-sm:text-5xl max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-speed-typing-game"><AiFillGithub />
-                </a>
-                <a className='text-5xl 
+                  </a>
+                  <a className='text-5xl 
                   text-white p-1.5  
                   hover:text-teal-300 
                     transition duration-0 hover:duration-150
                     max-sm:text-5xl max-sm:mr-1.5' target='_blank' href="https://osmdevelop.github.io/react-speed-typing-game/"><AiOutlineLink />
-                </a>
+                  </a>
+                </div>
               </div>
-            </div>
 
-            <div className='max-w-3xl relative'>
-              <Image src={web6}
-                className='rounded-lg object-cover'
-                width={"100%"}
-                height={"100%"}
-              />
-              <div className='flex gap-4 absolute bottom-0 right-0 bg-slate-700 rounded-tl-lg w-100'>
-                <a className=' text-5xl 
+              <div className='max-w-3xl relative'>
+                <Image src={web6}
+                  className='rounded-lg object-cover'
+                  width={"100%"}
+                  height={"100%"}
+                />
+                <div className='flex gap-4 absolute bottom-0 right-0 bg-slate-700 rounded-tl-lg w-100'>
+                  <a className=' text-5xl 
                   text-white p-1.5  
                   hover:text-teal-300 
                     transition duration-0 hover:duration-150
                     max-sm:text-5xl  max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-travel-journal"><AiFillGithub />
-                </a>
-                <a className=' text-5xl 
+                  </a>
+                  <a className=' text-5xl 
                   text-white p-1.5  
                   hover:text-teal-300 
                     transition duration-0 hover:duration-150
                     max-sm:text-5xl  max-sm:mr-1.5' target='_blank' href="https://osmdevelop.github.io/react-travel-journal/"><AiOutlineLink />
-                </a>
+                  </a>
+                </div>
               </div>
-            </div>
 
-            {/* <div className='max-w-3xl relative'>
+              {/* <div className='max-w-3xl relative'>
               <Image src={web7}
                 className='rounded-lg object-cover'
                 width={"100%"}
@@ -280,29 +329,30 @@ export default function Home() {
               </div>
             </div> */}
 
-            <div className='max-w-3xl relative'>
-              <Image src={web8}
-                className='rounded-lg object-cover'
-                width={"100%"}
-                height={"100%"}
-              />
-              <div className='flex gap-4 absolute bottom-0 right-0 bg-slate-700 rounded-tl-lg w-100'>
-                <a className=' text-5xl 
+              <div className='max-w-3xl relative'>
+                <Image src={web8}
+                  className='rounded-lg object-cover'
+                  width={"100%"}
+                  height={"100%"}
+                />
+                <div className='flex gap-4 absolute bottom-0 right-0 bg-slate-700 rounded-tl-lg w-100'>
+                  <a className=' text-5xl 
                   text-white p-1.5  
                   hover:text-teal-300 
                     transition duration-0 hover:duration-150
                     max-sm:text-5xl  max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/momentum-clone/"><AiFillGithub />
-                </a>
-                <a className=' text-5xl 
+                  </a>
+                  <a className=' text-5xl 
                   text-white p-1.5  
                   hover:text-teal-300 
                     transition duration-0 hover:duration-150
                     max-sm:text-5xl  max-sm:mr-1.5' target='_blank' href="https://osmdevelop.github.io/momentum-clone/"><AiOutlineLink />
-                </a>
+                  </a>
+                </div>
               </div>
-            </div>
 
-          </div>
+            </div>
+          </motion.div>
         </section>
         {/* Certificates */}
         <section>
@@ -412,6 +462,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </div>
+    </div >
   )
 }
