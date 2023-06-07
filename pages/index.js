@@ -106,7 +106,7 @@ export default function Home() {
             <div className='flex-1'>
               <motion.div
                 initial="offscreen"
-                whileInView={{ x: [-200, 30], y: 0, scale: 1 }}
+                whileInView={{ x: [-200, 0], y: 0, scale: 1 }}
                 viewport={{ once: true }}
 
                 transition={{
@@ -127,14 +127,14 @@ export default function Home() {
             <div className='flex-1'>
               <motion.div
                 initial="offscreen"
-                whileInView={{ x: [200, 30], y: 0, scale: 1 }}
+                whileInView={{ x: [200, 0], y: 0, scale: 1 }}
                 viewport={{ once: true }}
 
                 transition={{
                   duration: 0.8,
                 }}
               >
-                <div className="text-center shadow-lg p-10 rounded-xl my-10  flex-1 dark:bg-sky-900 dark:text-gray-200 flex flex-col">
+                <div className="text-center shadow-lg p-10 rounded-xl my-10 flex-1 dark:bg-sky-900 dark:text-gray-200 flex flex-col">
                   <Image src={design} width={100} height={100} className="self-center" />
                   <h3 className='text-lg font-medium pt-8 pb-2'>Creating Web pages using builders & IT Support</h3>
                   <p className='py-2'>Creating and updating SEO focused web pages with builders. Site hosting. Business email management and providing tech support for proper and effective workflow</p>
