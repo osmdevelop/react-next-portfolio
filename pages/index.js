@@ -20,6 +20,8 @@ import web5 from '../public/web5.png'
 import web6 from '../public/web6.png'
 import web7 from '../public/web7.png'
 import web8 from '../public/web8.png'
+import web9 from '../public/web9.png'
+
 import Link from 'next/link'
 
 import gfrontend from '../public/gfrontend.png'
@@ -99,7 +101,7 @@ export default function Home() {
               where I practiced building web pages and apps using modern technologies. I have done <span className="text-teal-500">freelance work</span> for people and small businesses.
             </p>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              Currently I <span className="text-teal-500">build</span> and <span className="text-teal-500">update</span> web pages for newcomers from Ukraine to the United States to provide all necessary information which is crucial at the beginnings of the stay and adapt to the new environment.
+              I <span className="text-teal-500">rebuilt</span> websites and <span className="text-teal-500">keep up-to-date</span> information for newcomers from Ukraine in the United States to provide all necessary information which is crucial at the beginnings of the stay and adapt to the new environment.
             </p>
           </div>
           <div className='lg:flex gap-10'>
@@ -347,6 +349,30 @@ export default function Home() {
                   hover:text-teal-300 
                     transition duration-0 hover:duration-150
                     max-sm:text-5xl  max-sm:mr-1.5' target='_blank' href="https://osmdevelop.github.io/momentum-clone/"><AiOutlineLink />
+                  </a>
+                </div>
+              </div>
+
+              <div className='max-w-3xl relative'>
+                <Image src={web9}
+                  className='rounded-lg object-cover'
+                  width={"100%"}
+                  height={"100%"}
+                />
+                <div className='flex gap-4 absolute bottom-0 right-0 bg-slate-700 rounded-tl-lg w-100'>
+                  <a className=' text-5xl 
+                  text-white p-1.5  
+                  hover:text-teal-300 
+                    transition duration-0 hover:duration-150
+                    max-sm:text-5xl  max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/google-keep/">
+                    <AiFillGithub />
+                  </a>
+                  <a className=' text-5xl 
+                  text-white p-1.5  
+                  hover:text-teal-300 
+                    transition duration-0 hover:duration-150
+                    max-sm:text-5xl  max-sm:mr-1.5' target='_blank' href="https://osmdevelop.github.io/google-keep/">
+                    <AiOutlineLink />
                   </a>
                 </div>
               </div>
