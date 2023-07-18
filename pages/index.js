@@ -1,4 +1,7 @@
 import Head from 'next/head'
+import Services from '../components/Services'
+import Portfolio from '../components/Portfolio'
+import Certificates from '../components/Certificates'
 import { motion } from "framer-motion"
 import { BsSun } from 'react-icons/bs'
 import {
@@ -21,6 +24,8 @@ import web6 from '../public/web6.png'
 import web7 from '../public/web7.png'
 import web8 from '../public/web8.png'
 import web9 from '../public/web9.png'
+import web10 from '../public/web10.png'
+
 
 import Link from 'next/link'
 
@@ -33,8 +38,11 @@ import kevin from '../public/KevinPowell.png'
 import bob from '../public/BobZiroll.png'
 import { useState } from 'react'
 
-export default function Home() {
+export default function Home(props) {
   const [darkMode, setDarkMode] = useState(true);
+  const inView1 = [-200, 0];
+  const inView2 = [200, 0];
+
 
   // motion
 
@@ -63,7 +71,7 @@ export default function Home() {
                 </a>
               </li>
               <li>
-                <a href="/Oleh's resume.pdf" className='bg-gradient-to-r from-cyan-500 to-teal-500 bg-cyan-500 text-white px-4 py-2 rounded-md hover:from-cyan-500 transition duration-0 hover:duration-150'
+                <a href="/OlehSmolikevych_Resume.pdf" className='bg-gradient-to-r from-cyan-500 to-teal-500 bg-cyan-500 text-white px-4 py-2 rounded-md hover:from-cyan-500 transition duration-0 hover:duration-150'
                 >Resume</a>
               </li>
             </ul>
@@ -105,49 +113,24 @@ export default function Home() {
             </p>
           </div>
           <div className='lg:flex gap-10'>
-            <div className='flex-1'>
-              <motion.div
-                initial="offscreen"
-                whileInView={{ x: [-200, 0], y: 0, scale: 1 }}
-                viewport={{ once: true }}
-
-                transition={{
-                  duration: 0.8,
-                }}
-              >
-                <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-sky-900 dark:text-gray-200 flex flex-col justify-center items-center">
-                  <Image src={code} width={100} height={100} />
-                  <h3 className='text-lg font-medium pt-8 pb-2'>Front End Development</h3>
-                  <p className='py-2'>Building user-friendly web pages using modern tools</p>
-                  <h4 className='text-xl py-4 text-teal-400'>Tools I use</h4>
-                  <p className='text-lg text-gray-800 py-1 dark:text-sky-200'>HTML</p>
-                  <p className='text-lg text-gray-800 py-1 dark:text-sky-200'>CSS / Tailwind, Bootstrap frameworks</p>
-                  <p className='text-xl text-gray-800 py-1 dark:text-sky-200'>JS / React.js, Next.js, other libraries and frameworks</p>
-                </div>
-              </motion.div>
-            </div>
-            <div className='flex-1'>
-              <motion.div
-                initial="offscreen"
-                whileInView={{ x: [200, 0], y: 0, scale: 1 }}
-                viewport={{ once: true }}
-
-                transition={{
-                  duration: 0.8,
-                }}
-              >
-                <div className="text-center shadow-lg p-10 rounded-xl my-10 flex-1 dark:bg-sky-900 dark:text-gray-200 flex flex-col">
-                  <Image src={design} width={100} height={100} className="self-center" />
-                  <h3 className='text-lg font-medium pt-8 pb-2'>Creating Web pages using builders & IT Support</h3>
-                  <p className='py-2'>Creating and updating SEO focused web pages with builders. Site hosting. Business email management and providing tech support for proper and effective workflow</p>
-                  <h4 className='text-lg py-4 text-teal-400'>Tools I use</h4>
-                  <p className='text-lg text-gray-800 py-1 dark:text-sky-200'>WIX</p>
-                  <p className='text-lg text-gray-800 py-1 dark:text-sky-200'>GoDaddy</p>
-                  <p className='text-lg text-gray-800 py-1 dark:text-sky-200'>Netlify</p>
-                  <p className='text-lg text-gray-800 py-1 dark:text-sky-200'>Office 365</p>
-                </div>
-              </motion.div>
-            </div>
+            <Services
+              inView={inView1} /* The tough one */
+              img={code}
+              title="Front End Development"
+              description="Building user-friendly web pages using modern tools"
+              tool1="HTML"
+              tool2="CSS / TailwindCSS, Bootstrap frameworks"
+              tool3="JS / React.js, Next.js, other libraries and frameworks"
+            />
+            <Services
+              inView={inView2}
+              img={design}
+              title="Creating Web pages using builders & IT Support"
+              description="Creating and updating SEO focused web pages with builders. Site hosting. Business email management and providing tech support for proper and effective workflow"
+              tool1="WIX"
+              tool2="GoDaddy, Netlify"
+              tool3="Office 365"
+            />
           </div>
         </section>
         {/* PORTFOLIO */}
@@ -175,207 +158,46 @@ export default function Home() {
           >
             <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap items-center justify-between lg:justify-center'>
 
-              <div className='lg:w-2/4 max-w-3xl relative'>
-                <Image src={web1}
-                  className='rounded-lg object-cover'
-                  width={"100%"}
-                  height={"100%"}
-                />
-                <div className='flex gap-4 absolute bottom-0 right-0 bg-slate-700 rounded-tl-lg w-100'>
-                  <a className=' text-5xl 
-                  text-white p-1.5  
-                  hover:text-teal-300 
-                    transition duration-0 hover:duration-150
-                    max-sm:text-5xl' target='_blank' href="https://github.com/osmdevelop/space-travel">
-                    <AiFillGithub className='' />
-                  </a>
-                  <a className=' text-5xl 
-                  text-white p-1.5  
-                  hover:text-teal-300 
-                    transition duration-0 hover:duration-150
-                    max-sm:text-5xl' target='_blank' href="https://osmdevelop.github.io/space-travel/">
-                    <AiOutlineLink className='' />
-                  </a>
-                </div>
-              </div>
-
-              <div className='lg:w-2/4 max-w-3xl relative'>
-                <Image src={web2}
-                  className='rounded-lg object-cover'
-                  width={"100%"}
-                  height={"100%"}
-                />
-                <div className='flex gap-4 absolute bottom-0 right-0 bg-slate-700 rounded-tl-lg w-100'>
-                  <a className=' text-5xl 
-                  text-white p-1.5  
-                  hover:text-teal-300 
-                    transition duration-0 hover:duration-150
-                    max-sm:text-5xl  max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-tenzies-game"><AiFillGithub className='' />
-                  </a>
-                  <a className='text-5xl 
-                  text-white p-1.5  
-                  hover:text-teal-300 
-                    transition duration-0 hover:duration-150
-                    max-sm:text-5xl  max-sm:mr-1.5' target='_blank' href="https://osmdevelop.github.io/react-tenzies-game/"><AiOutlineLink className='' />
-                  </a>
-                </div>
-              </div>
-
-              <div className='max-w-2xl relative'>
-                <Image src={web3}
-                  className='rounded-lg object-cover'
-                  width={"100%"}
-                  height={"100%"}
-                />
-                <div className='flex gap-4 absolute bottom-0 right-0 bg-slate-700 rounded-tl-lg w-100'>
-                  <a className=' text-5xl 
-                  text-white p-1.5  
-                  hover:text-teal-300 
-                    transition duration-0 hover:duration-150
-                    max-sm:text-5xl  max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-movie-search"><AiFillGithub className='' />
-                  </a>
-                  <a className=' text-5xl 
-                  text-white p-1.5  
-                  hover:text-teal-300 
-                    transition duration-0 hover:duration-150
-                    max-sm:text-5xl  max-sm:mr-1.5' target='_blank' href="https://osmdevelop.github.io/react-movie-search/"><AiOutlineLink className='' />
-                  </a>
-                </div>
-              </div>
-
-              <div className='max-w-3xl relative'>
-                <Image src={web4}
-                  className='rounded-lg object-cover'
-                  width={"100%"}
-                  height={"100%"}
-                />
-                <div className='flex gap-4 absolute bottom-0 right-0 bg-slate-700 rounded-tl-lg w-100'>
-                  <a className='text-5xl 
-                  text-white p-1.5  
-                  hover:text-teal-300 
-                    transition duration-0 hover:duration-150
-                    max-sm:text-5xl max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/capital-hungry"><AiFillGithub className='' />
-                  </a>
-                  <a className='text-5xl 
-                  text-white p-1.5  
-                  hover:text-teal-300 
-                    transition duration-0 hover:duration-150
-                    max-sm:text-5xl max-sm:mr-1.5' target='_blank' href="https://osmdevelop.github.io/capital-hungry/"><AiOutlineLink className='' />
-                  </a>
-                </div>
-              </div>
-
-              <div className='max-w-3xl relative'>
-                <Image src={web5}
-                  className='rounded-lg object-cover'
-                  width={"100%"}
-                  height={"100%"}
-                />
-                <div className='flex gap-4 absolute bottom-0 right-0 bg-slate-700 rounded-tl-lg w-100'>
-                  <a className='text-5xl 
-                  text-white p-1.5  
-                  hover:text-teal-300 
-                    transition duration-0 hover:duration-150
-                    max-sm:text-5xl max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-speed-typing-game"><AiFillGithub />
-                  </a>
-                  <a className='text-5xl 
-                  text-white p-1.5  
-                  hover:text-teal-300 
-                    transition duration-0 hover:duration-150
-                    max-sm:text-5xl max-sm:mr-1.5' target='_blank' href="https://osmdevelop.github.io/react-speed-typing-game/"><AiOutlineLink />
-                  </a>
-                </div>
-              </div>
-
-              <div className='max-w-3xl relative'>
-                <Image src={web6}
-                  className='rounded-lg object-cover'
-                  width={"100%"}
-                  height={"100%"}
-                />
-                <div className='flex gap-4 absolute bottom-0 right-0 bg-slate-700 rounded-tl-lg w-100'>
-                  <a className=' text-5xl 
-                  text-white p-1.5  
-                  hover:text-teal-300 
-                    transition duration-0 hover:duration-150
-                    max-sm:text-5xl  max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-travel-journal"><AiFillGithub />
-                  </a>
-                  <a className=' text-5xl 
-                  text-white p-1.5  
-                  hover:text-teal-300 
-                    transition duration-0 hover:duration-150
-                    max-sm:text-5xl  max-sm:mr-1.5' target='_blank' href="https://osmdevelop.github.io/react-travel-journal/"><AiOutlineLink />
-                  </a>
-                </div>
-              </div>
-
-              {/* <div className='max-w-3xl relative'>
-              <Image src={web7}
-                className='rounded-lg object-cover'
-                width={"100%"}
-                height={"100%"}
+              <Portfolio
+                web={web1}
+                github="https://github.com/osmdevelop/space-travel"
+                link="https://osmdevelop.github.io/space-travel/"
               />
-              <div className='flex gap-4 absolute bottom-0 right-0 bg-slate-700 rounded-tl-lg w-100'>
-                <a className=' text-5xl 
-                  text-white p-1.5  
-                  hover:text-teal-300 
-                    transition duration-0 hover:duration-150
-                    max-sm:text-5xl  max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/react-travel-journal"><AiFillGithub />
-                </a>
-                <a className=' text-5xl 
-                  text-white p-1.5  
-                  hover:text-teal-300 
-                    transition duration-0 hover:duration-150
-                    max-sm:text-5xl  max-sm:mr-1.5' target='_blank' href="https://osmdevelop.github.io/react-travel-journal/"><AiOutlineLink />
-                </a>
-              </div>
-            </div> */}
-
-              <div className='max-w-3xl relative'>
-                <Image src={web8}
-                  className='rounded-lg object-cover'
-                  width={"100%"}
-                  height={"100%"}
-                />
-                <div className='flex gap-4 absolute bottom-0 right-0 bg-slate-700 rounded-tl-lg w-100'>
-                  <a className=' text-5xl 
-                  text-white p-1.5  
-                  hover:text-teal-300 
-                    transition duration-0 hover:duration-150
-                    max-sm:text-5xl  max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/momentum-clone/"><AiFillGithub />
-                  </a>
-                  <a className=' text-5xl 
-                  text-white p-1.5  
-                  hover:text-teal-300 
-                    transition duration-0 hover:duration-150
-                    max-sm:text-5xl  max-sm:mr-1.5' target='_blank' href="https://osmdevelop.github.io/momentum-clone/"><AiOutlineLink />
-                  </a>
-                </div>
-              </div>
-
-              <div className='max-w-3xl relative'>
-                <Image src={web9}
-                  className='rounded-lg object-cover'
-                  width={"100%"}
-                  height={"100%"}
-                />
-                <div className='flex gap-4 absolute bottom-0 right-0 bg-slate-700 rounded-tl-lg w-100'>
-                  <a className=' text-5xl 
-                  text-white p-1.5  
-                  hover:text-teal-300 
-                    transition duration-0 hover:duration-150
-                    max-sm:text-5xl  max-sm:mr-1.5' target='_blank' href="https://github.com/osmdevelop/google-keep/">
-                    <AiFillGithub />
-                  </a>
-                  <a className=' text-5xl 
-                  text-white p-1.5  
-                  hover:text-teal-300 
-                    transition duration-0 hover:duration-150
-                    max-sm:text-5xl  max-sm:mr-1.5' target='_blank' href="https://osmdevelop.github.io/google-keep/">
-                    <AiOutlineLink />
-                  </a>
-                </div>
-              </div>
+              <Portfolio
+                web={web2}
+                github="https://github.com/osmdevelop/react-tenzies-game"
+                link="https://osmdevelop.github.io/react-tenzies-game/"
+              />
+              <Portfolio
+                web={web3}
+                github="https://github.com/osmdevelop/react-movie-search"
+                link="https://osmdevelop.github.io/react-movie-search/"
+              />
+              <Portfolio
+                web={web4}
+                github="https://github.com/osmdevelop/capital-hungry"
+                link="https://osmdevelop.github.io/capital-hungry/"
+              />
+              <Portfolio
+                web={web5}
+                github="https://github.com/osmdevelop/react-speed-typing-game"
+                link="https://osmdevelop.github.io/react-speed-typing-game/"
+              />
+              <Portfolio
+                web={web10}
+                github="https://github.com/osmdevelop/react-travel-journal"
+                link="https://osmdevelop.github.io/react-travel-journal/"
+              />
+              <Portfolio
+                web={web8}
+                github="https://github.com/osmdevelop/momentum-clone"
+                link="https://osmdevelop.github.io/momentum-clone/"
+              />
+              <Portfolio
+                web={web9}
+                github="https://github.com/osmdevelop/google-keep"
+                link="https://osmdevelop.github.io/google-keep/"
+              />
 
             </div>
           </motion.div>
@@ -386,50 +208,26 @@ export default function Home() {
             <h3 className='text-3xl py-1 text-teal-600'>Certificates</h3>
           </div>
           <div className='flex gap-6 max-lg:flex-col m-3'>
-            <div>
-              <div className='transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-225'>
-                <a href='https://scrimba.com/certificate/uqQa4Rcq/gfrontend' target='_blank'>
-                  <Image src={gfrontend}
-                    className='rounded-lg object-cover'
-                    width={"100%"}
-                    height={"100%"} />
-                </a>
-              </div>
-              <p className='text-base py-1 text-teal-600'>Front End Developer Career Path</p>
-            </div>
-            <div>
-              <div className='transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-225'>
-                <a href='https://scrimba.com/certificate/uqQa4Rcq/gresponsive' target='_blank'>
-                  <Image src={gcss}
-                    className='rounded-lg object-cover'
-                    width={"100%"}
-                    height={"100%"} />
-                </a>
-              </div>
-              <p className='text-base py-1 text-teal-600'>Responsive Web Design</p>
-            </div>
-            <div>
-              <div className='transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-225'>
-                <a href='https://scrimba.com/certificate/uqQa4Rcq/gjavascript' target='_blank'>
-                  <Image src={gjs}
-                    className='rounded-lg object-cover'
-                    width={"100%"}
-                    height={"100%"} />
-                </a>
-              </div>
-              <p className='text-base py-1 text-teal-600'>JavaScript Deep Dive</p>
-            </div>
-            <div>
-              <div className='transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-225'>
-                <a href='https://scrimba.com/certificate/uqQa4Rcq/greact' target='_blank'>
-                  <Image src={greact}
-                    className='rounded-lg object-cover'
-                    width={"100%"}
-                    height={"100%"} />
-                </a>
-              </div>
-              <p className='text-base py-1 text-teal-600'>React Bootcamp</p>
-            </div>
+            <Certificates
+              certificateLink="https://scrimba.com/certificate/uqQa4Rcq/gfrontend"
+              certificateImg={gfrontend}
+              certificateTitle="Front End Developer Career Path"
+            />
+            <Certificates
+              certificateLink="https://scrimba.com/certificate/uqQa4Rcq/gresponsive"
+              certificateImg={gcss}
+              certificateTitle="Responsive Web Design"
+            />
+            <Certificates
+              certificateLink="https://scrimba.com/certificate/uqQa4Rcq/gjavascript"
+              certificateImg={gjs}
+              certificateTitle="JavaScript Deep Dive"
+            />
+            <Certificates
+              certificateLink="https://scrimba.com/certificate/uqQa4Rcq/greact"
+              certificateImg={greact}
+              certificateTitle="Advanced React"
+            />
           </div>
         </section>
         {/* / Certificates */}
