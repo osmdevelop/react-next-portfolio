@@ -15,6 +15,7 @@ import {
 import Image from 'next/image'
 import design from '../public/design.png'
 import code from '../public/code.png'
+import web0 from '../public/web0.png'
 import web1 from '../public/web1.png'
 import web2 from '../public/web2.png'
 import web3 from '../public/web3.png'
@@ -157,6 +158,11 @@ export default function Home(props) {
           >
             <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap items-center justify-between lg:justify-center'>
 
+              <Portfolio
+                web={web0}
+                github="https://github.com/osmdevelop/bank-app"
+                link="https://bank-app-novyi.netlify.app/"
+              />
               <Portfolio
                 web={web1}
                 github="https://github.com/osmdevelop/space-travel"
