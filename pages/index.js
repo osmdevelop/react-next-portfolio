@@ -71,7 +71,7 @@ export default function Home(props) {
                 </a>
               </li>
               <li>
-                <a href="/OlehSmolikevych_Resume.pdf" className='bg-gradient-to-r from-cyan-500 to-teal-500 bg-cyan-500 text-white px-4 py-2 rounded-md hover:from-cyan-500 transition duration-0 hover:duration-150'
+                <a href="/OlehSmolikevychResume.pdf" className='bg-gradient-to-r from-cyan-500 to-teal-500 bg-cyan-500 text-white px-4 py-2 rounded-md hover:from-cyan-500 transition duration-0 hover:duration-150'
                 >Resume</a>
               </li>
             </ul>
