@@ -108,9 +108,9 @@ export default function Home(props) {
               <span className="text-teal-500"> courses </span>
               where I practiced building web pages and apps using modern technologies. I have done <span className="text-teal-500">freelance work</span> for people and small businesses.
             </p>
-            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
+            {/* <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
               I <span className="text-teal-500">rebuilt</span> websites and <span className="text-teal-500">keep up-to-date</span> information for newcomers from Ukraine in the United States to provide all necessary information which is crucial at the beginnings of the stay and adapt to the new environment.
-            </p>
+            </p> */}
           </div>
           <div className='lg:flex gap-10'>
             <Services
