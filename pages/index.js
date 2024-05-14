@@ -120,16 +120,16 @@ export default function Home(props) {
               description="Building user-friendly web pages using modern tools"
               tool1="HTML"
               tool2="CSS / TailwindCSS, Bootstrap frameworks"
-              tool3="JS / React.js, Next.js, other libraries and frameworks"
+              tool3="Javascript, Tailwind, React.js, Next.js, other libraries and frameworks"
             />
             <Services
               inView={inView2}
               img={design}
               title="Creating Web pages using builders & IT Support"
-              description="Creating and updating SEO focused web pages with builders. Site hosting. Business email management and providing tech support for proper and effective workflow"
-              tool1="WIX"
-              tool2="GoDaddy, Netlify"
-              tool3="Office 365"
+              description="Creating and updating SEO focused web pages. Site hosting. Business email management and providing tech support for proper and effective workflow"
+              tool1="Salesforce"
+              tool2="GoDaddy, Wordpress, Netlify, Vercel"
+              tool3="Microsoft 365 / Microsoft Power Automate"
             />
           </div>
         </section>
