@@ -13,7 +13,6 @@ import {
   AiFillGithub,
   AiOutlineMail
 } from 'react-icons/ai'
-import Image from 'next/image'
 import { useState } from 'react'
 
 export default function Home(props) {
@@ -27,7 +26,6 @@ export default function Home(props) {
       period: "May 2026 - Present",
       location: "Chicago, Illinois · On-site",
       description: "Support and coordinate digital banking initiatives, vendor communications, and system improvements within the Project Management Department. Develop and implement AI-assisted automation solutions to streamline internal workflows and reduce manual processes across the organization. Build and maintain internal tools and integrations supporting wire transfer systems and digital banking operations.",
-      achievements: [],
       technologies: ["Digital Banking", "AI Automation", "Wire Transfer Systems", "Project Management", "Internal Tools"]
     },
     {
@@ -35,7 +33,6 @@ export default function Home(props) {
       company: "Selfreliance Federal Credit Union",
       period: "Apr 2025 - May 2026",
       location: "Chicago, Illinois · On-site",
-      description: "",
       achievements: [
         "Support and optimize IT infrastructure across multiple branches, including Active Directory, Microsoft 365, Intune, and internal systems.",
         "Design and implement automation solutions to improve IT operations, including asset tracking, software deployment, and internal workflows.",
@@ -95,27 +92,33 @@ export default function Home(props) {
   const skillsCategories = [
     {
       category: "Frontend Technologies",
-      skills: ["React", "Next.js", "JavaScript", "TypeScript", "HTML5", "CSS3", "TailwindCSS", "Bootstrap", "Material UI"]
+      primary: ["React", "Next.js", "JavaScript", "TypeScript", "TailwindCSS"],
+      secondary: ["HTML5", "CSS3", "Bootstrap", "Material UI"]
     },
     {
       category: "Backend & Cloud",
-      skills: ["Cloudflare Workers", "Node.js", "MongoDB", "APIs", "REST", "GraphQL"]
+      primary: ["Cloudflare Workers", "Node.js", "APIs"],
+      secondary: ["MongoDB", "REST", "GraphQL"]
     },
     {
       category: "AI & Machine Learning",
-      skills: ["AI Agents", "AutoRAG", "MCP Services", "Vectorize", "AI Gateways", "LLM Integration"]
+      primary: ["AI Agents", "AutoRAG", "MCP Services", "LLM Integration"],
+      secondary: ["Vectorize", "AI Gateways"]
     },
     {
       category: "Cloudflare Stack",
-      skills: ["Cloudflare Workers", "D1", "R2", "Vectorize", "Cloudflare Pages"]
+      primary: ["Cloudflare Workers", "D1", "R2"],
+      secondary: ["Vectorize", "Cloudflare Pages"]
     },
     {
       category: "Enterprise Tools",
-      skills: ["Salesforce", "Microsoft 365", "Power Automate", "Active Directory", "Intune", "Camunda"]
+      primary: ["Salesforce", "Microsoft 365", "Active Directory", "Intune"],
+      secondary: ["Power Automate", "Camunda"]
     },
     {
       category: "DevOps & Deployment",
-      skills: ["Vercel", "Netlify", "Git", "CI/CD", "Docker"]
+      primary: ["Git", "Vercel", "CI/CD"],
+      secondary: ["Netlify", "Docker"]
     }
   ];
 
@@ -149,9 +152,20 @@ export default function Home(props) {
     <div className={darkMode ? "dark" : ""}>
       <Head>
         <title>Oleh Smolikevych - Digital Banking & Automation | Lead Software Engineer | AI Systems for Regulated Industries</title>
-        <meta name="description" content="Software Engineer specializing in secure, scalable, and AI-driven web applications. Full-stack developer with expertise in React, Next.js, Cloudflare Workers, and AI Agents." />
+        <meta name="description" content="Digital Banking & Automation Specialist and Lead Software Engineer building AI systems for regulated industries. Expertise in React, Next.js, Cloudflare Workers, RAG pipelines, and enterprise IT." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Oleh Smolikevych - Digital Banking & Automation | Lead Software Engineer" />
+        <meta property="og:description" content="Digital Banking & Automation Specialist and Lead Software Engineer building AI systems for regulated industries." />
+        <meta property="og:url" content="https://osmdevelop.com" />
+        <meta property="og:image" content="https://osmdevelop.com/web0.png" />
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Oleh Smolikevych - Digital Banking & Automation | Lead Software Engineer" />
+        <meta name="twitter:description" content="Digital Banking & Automation Specialist and Lead Software Engineer building AI systems for regulated industries." />
+        <meta name="twitter:image" content="https://osmdevelop.com/web0.png" />
       </Head>
 
       <main className='bg-white dark:bg-gray-900 min-h-screen'>
@@ -160,6 +174,15 @@ export default function Home(props) {
           <div className='flex justify-between items-center'>
             <h1 className='text-xl font-burtons dark:text-teal-500 text-gray-800 dark:text-white'>osmdevelop</h1>
             <ul className='flex items-center gap-6'>
+              <li className='hidden md:block'>
+                <a href="#experience" className='text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors'>Experience</a>
+              </li>
+              <li className='hidden md:block'>
+                <a href="#projects" className='text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors'>Projects</a>
+              </li>
+              <li className='hidden md:block'>
+                <a href="#contact" className='text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors'>Contact</a>
+              </li>
               <li>
                 <button
                   onClick={() => setDarkMode(!darkMode)}
@@ -225,7 +248,7 @@ export default function Home(props) {
         </section>
 
         {/* Experience Section */}
-        <section className='px-10 pb-16 max-sm:px-5 md:px-20 lg:px-40 bg-gray-50 dark:bg-gray-800/50'>
+        <section id="experience" className='px-10 pb-16 max-sm:px-5 md:px-20 lg:px-40 bg-gray-50 dark:bg-gray-800/50'>
           <div className='max-w-6xl mx-auto'>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -263,7 +286,7 @@ export default function Home(props) {
             </motion.div>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mt-8'>
               {skillsCategories.map((category, index) => (
-                <Skills key={index} category={category.category} skills={category.skills} index={index} />
+                <Skills key={index} category={category.category} primary={category.primary} secondary={category.secondary} index={index} />
               ))}
             </div>
           </div>
@@ -309,7 +332,7 @@ export default function Home(props) {
         </section>
 
         {/* Portfolio Section */}
-        <section className='px-10 pb-16 max-sm:px-5 md:px-20 lg:px-40'>
+        <section id="projects" className='px-10 pb-16 max-sm:px-5 md:px-20 lg:px-40'>
           <div className='max-w-6xl mx-auto'>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -486,17 +509,25 @@ export default function Home(props) {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className='text-3xl font-bold text-teal-600 dark:text-teal-400 mb-6'>Get In Touch</h2>
+            <h2 id='contact' className='text-3xl font-bold text-teal-600 dark:text-teal-400 mb-6'>Get In Touch</h2>
             <div className='flex flex-col md:flex-row justify-center items-center gap-6 text-gray-700 dark:text-gray-300'>
-              <AiOutlineMail className='text-4xl text-teal-500' />
               <a
-                id='contact'
-                className='text-xl hover:text-teal-500 dark:hover:text-teal-400 transition-colors'
+                className='flex items-center gap-2 text-xl hover:text-teal-500 dark:hover:text-teal-400 transition-colors'
                 href="mailto:oleh@osmdevelop.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
+                <AiOutlineMail className='text-2xl text-teal-500' />
                 oleh@osmdevelop.com
+              </a>
+              <a
+                className='flex items-center gap-2 text-xl hover:text-teal-500 dark:hover:text-teal-400 transition-colors'
+                href="https://www.linkedin.com/in/olehsmolikevych/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <AiFillLinkedin className='text-2xl text-teal-500' />
+                LinkedIn
               </a>
             </div>
             <div className='mt-8 text-center text-gray-600 dark:text-gray-400'>

@@ -17,6 +17,7 @@ export default function Certificates(props) {
                         className='rounded-t-lg object-cover w-full'
                         width={400}
                         height={300}
+                        loading="lazy"
                         alt={props.certificateTitle}
                     />
                 </a>

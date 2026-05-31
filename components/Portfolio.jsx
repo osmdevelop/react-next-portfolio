@@ -20,6 +20,7 @@ export default function Portfolio(props) {
                     className='rounded-lg object-cover w-full h-auto transition-transform duration-300 group-hover:scale-105'
                     width={600}
                     height={400}
+                    loading="lazy"
                     alt="Portfolio project"
                 />
                 <div className='flex gap-2 absolute bottom-0 right-0 bg-slate-800/90 dark:bg-gray-900/90 backdrop-blur-sm rounded-tl-lg p-2'>

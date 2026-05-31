@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 
-export default function Skills({ category, skills, index }) {
+export default function Skills({ category, primary = [], secondary = [], index }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -13,16 +13,28 @@ export default function Skills({ category, skills, index }) {
         <span className="w-2 h-2 bg-teal-500 rounded-full"></span>
         {category}
       </h3>
-      <div className="flex flex-wrap gap-3">
-        {skills.map((skill, idx) => (
+      <div className="flex flex-wrap gap-2 mb-3">
+        {primary.map((skill, idx) => (
           <span
             key={idx}
-            className="px-4 py-2 bg-gradient-to-r from-teal-500 to-cyan-500 text-white rounded-lg text-sm font-medium shadow-md hover:shadow-lg transition-shadow duration-200"
+            className="px-3 py-1.5 bg-gradient-to-r from-teal-500 to-cyan-500 text-white rounded-lg text-sm font-semibold shadow-md hover:shadow-lg transition-shadow duration-200"
           >
             {skill}
           </span>
         ))}
       </div>
+      {secondary.length > 0 && (
+        <div className="flex flex-wrap gap-2 pt-2 border-t border-gray-100 dark:border-gray-700">
+          {secondary.map((skill, idx) => (
+            <span
+              key={idx}
+              className="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 rounded-lg text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-200"
+            >
+              {skill}
+            </span>
+          ))}
+        </div>
+      )}
     </motion.div>
   )
 }
