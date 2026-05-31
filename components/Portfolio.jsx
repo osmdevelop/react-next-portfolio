@@ -4,7 +4,6 @@ import {
     AiFillGithub,
     AiOutlineLink
 } from 'react-icons/ai'
-import Image from 'next/image'
 
 export default function Portfolio(props) {
     return (
@@ -16,7 +15,7 @@ export default function Portfolio(props) {
             className='lg:w-2/4 max-w-3xl relative group'
         >
             <div className="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <Image
+                <img
                     src={props.web}
                     className='rounded-lg object-cover w-full h-auto transition-transform duration-300 group-hover:scale-105'
                     width={600}

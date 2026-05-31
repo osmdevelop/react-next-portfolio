@@ -1,6 +1,5 @@
 import react from "react";
 import { motion } from "framer-motion"
-import Image from 'next/image'
 
 export default function Certificates(props) {
     return (
@@ -13,7 +12,7 @@ export default function Certificates(props) {
         >
             <div className='transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-300'>
                 <a href={props.certificateLink} target='_blank' rel="noopener noreferrer">
-                    <Image
+                    <img
                         src={props.certificateImg}
                         className='rounded-t-lg object-cover w-full'
                         width={400}

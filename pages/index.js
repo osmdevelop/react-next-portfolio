@@ -14,22 +14,6 @@ import {
   AiOutlineMail
 } from 'react-icons/ai'
 import Image from 'next/image'
-import web0 from '../public/web0.png'
-import web1 from '../public/web1.png'
-import web2 from '../public/web2.png'
-import web3 from '../public/web3.png'
-import web4 from '../public/web4.png'
-import web5 from '../public/web5.png'
-import web8 from '../public/web8.png'
-import web9 from '../public/web9.png'
-import web10 from '../public/web10.png'
-
-import gfrontend from '../public/gfrontend.png'
-import gcss from '../public/gcss.png'
-import gjs from '../public/gjs.png'
-import greact from '../public/greact.png'
-import administratorCert from '../public/Administrator-cert.jpg'
-import aiAssociateCert from '../public/ai-associate-cert.jpg'
 import { useState } from 'react'
 
 export default function Home(props) {
@@ -348,47 +332,47 @@ export default function Home(props) {
             >
               <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap items-center justify-center'>
                 <Portfolio
-                  web={web0}
+                  web="/web0.png"
                   github="https://github.com/osmdevelop/bank-app"
                   link="https://bank-app-novyi.netlify.app/"
                 />
                 <Portfolio
-                  web={web1}
+                  web="/web1.png"
                   github="https://github.com/osmdevelop/space-travel"
                   link="https://osmdevelop.github.io/space-travel/"
                 />
                 <Portfolio
-                  web={web2}
+                  web="/web2.png"
                   github="https://github.com/osmdevelop/react-tenzies-game"
                   link="https://osmdevelop.github.io/react-tenzies-game/"
                 />
                 <Portfolio
-                  web={web3}
+                  web="/web3.png"
                   github="https://github.com/osmdevelop/react-movie-search"
                   link="https://osmdevelop.github.io/react-movie-search/"
                 />
                 <Portfolio
-                  web={web4}
+                  web="/web4.png"
                   github="https://github.com/osmdevelop/capital-hungry"
                   link="https://osmdevelop.github.io/capital-hungry/"
                 />
                 <Portfolio
-                  web={web5}
+                  web="/web5.png"
                   github="https://github.com/osmdevelop/react-speed-typing-game"
                   link="https://osmdevelop.github.io/react-speed-typing-game/"
                 />
                 <Portfolio
-                  web={web10}
+                  web="/web10.png"
                   github="https://github.com/osmdevelop/react-travel-journal"
                   link="https://osmdevelop.github.io/react-travel-journal/"
                 />
                 <Portfolio
-                  web={web8}
+                  web="/web8.png"
                   github="https://github.com/osmdevelop/momentum-clone"
                   link="https://osmdevelop.github.io/momentum-clone/"
                 />
                 <Portfolio
-                  web={web9}
+                  web="/web9.png"
                   github="https://github.com/osmdevelop/google-keep"
                   link="https://osmdevelop.github.io/google-keep/"
                 />
@@ -416,34 +400,34 @@ export default function Home(props) {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8'>
               <Certificates
                 certificateLink="https://trailblazer.me/credentials/5898837"
-                certificateImg={administratorCert}
+                certificateImg="/Administrator-cert.jpg"
                 certificateTitle="Salesforce Certified Administrator (SCA)"
                 certificateDate="Issued Mar 2025"
               />
               <Certificates
                 certificateLink="https://trailblazer.me/credentials/4215144"
-                certificateImg={aiAssociateCert}
+                certificateImg="/ai-associate-cert.jpg"
                 certificateTitle="AI Associate - Salesforce"
                 certificateDate="Issued Mar 2024"
               />
               <Certificates
                 certificateLink="https://scrimba.com/certificate/uqQa4Rcq/gfrontend"
-                certificateImg={gfrontend}
+                certificateImg="/gfrontend.png"
                 certificateTitle="Front End Developer Career Path"
               />
               <Certificates
                 certificateLink="https://scrimba.com/certificate/uqQa4Rcq/gresponsive"
-                certificateImg={gcss}
+                certificateImg="/gcss.png"
                 certificateTitle="Responsive Web Design"
               />
               <Certificates
                 certificateLink="https://scrimba.com/certificate/uqQa4Rcq/gjavascript"
-                certificateImg={gjs}
+                certificateImg="/gjs.png"
                 certificateTitle="JavaScript Deep Dive"
               />
               <Certificates
                 certificateLink="https://scrimba.com/certificate/uqQa4Rcq/greact"
-                certificateImg={greact}
+                certificateImg="/greact.png"
                 certificateTitle="Advanced React"
               />
             </div>
