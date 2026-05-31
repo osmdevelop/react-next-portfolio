@@ -40,15 +40,25 @@ export default function Home(props) {
   // Experience data
   const experiences = [
     {
+      title: "Digital Banking & Automation Specialist",
+      company: "Selfreliance Federal Credit Union",
+      period: "May 2026 - Present",
+      location: "Chicago, Illinois · On-site",
+      description: "Support and coordinate digital banking initiatives, vendor communications, and system improvements within the Project Management Department. Develop and implement AI-assisted automation solutions to streamline internal workflows and reduce manual processes across the organization. Build and maintain internal tools and integrations supporting wire transfer systems and digital banking operations.",
+      achievements: [],
+      technologies: ["Digital Banking", "AI Automation", "Wire Transfer Systems", "Project Management", "Internal Tools"]
+    },
+    {
       title: "IT Specialist",
       company: "Selfreliance Federal Credit Union",
-      period: "Apr 2025 - Present",
+      period: "Apr 2025 - May 2026",
       location: "Chicago, Illinois · On-site",
-      description: "Providing comprehensive IT support across multiple branches, managing enterprise infrastructure and security systems.",
+      description: "",
       achievements: [
-        "Provide IT support across branches, including Active Directory, Microsoft 365, Intune, and network systems",
-        "Maintain endpoint security and device compliance",
-        "Developed automation processes for IT asset tracking and software deployment"
+        "Support and optimize IT infrastructure across multiple branches, including Active Directory, Microsoft 365, Intune, and internal systems.",
+        "Design and implement automation solutions to improve IT operations, including asset tracking, software deployment, and internal workflows.",
+        "Develop internal tools and AI-assisted solutions to enhance efficiency and reduce manual workload across departments.",
+        "Maintain and support data backup and recovery processes, ensuring data integrity and compliance with organizational and regulatory requirements."
       ],
       technologies: ["Active Directory", "Microsoft 365", "Intune", "Network Systems", "Endpoint Security"]
     },
@@ -156,7 +166,7 @@ export default function Home(props) {
   return (
     <div className={darkMode ? "dark" : ""}>
       <Head>
-        <title>Oleh Smolikevych - Software Engineer | AI Agents Developer | IT Specialist</title>
+        <title>Oleh Smolikevych - Digital Banking & Automation | Lead Software Engineer | AI Systems for Regulated Industries</title>
         <meta name="description" content="Software Engineer specializing in secure, scalable, and AI-driven web applications. Full-stack developer with expertise in React, Next.js, Cloudflare Workers, and AI Agents." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -202,12 +212,12 @@ export default function Home(props) {
               Oleh Smolikevych
             </h1>
             <h2 className='text-2xl py-2 md:text-3xl dark:text-gray-100 text-gray-800 font-semibold mb-6'>
-              Software Engineer | AI Agents Developer | IT Specialist
+              Digital Banking & Automation | Lead Software Engineer | AI Systems for Regulated Industries
             </h2>
             <p className='text-lg py-5 leading-8 text-gray-700 md:text-xl max-w-2xl mx-auto dark:text-gray-300 mb-8'>
               Results-driven software engineer specializing in secure, scalable, and user-centric web applications. Proven track record of translating complex requirements into efficient and elegant solutions. Dedicated to continuous learning and exploring the latest technologies to drive innovation.
             </p>
-            
+
             {/* Social Links */}
             <div className='text-4xl flex justify-center gap-8 py-4 text-gray-600 dark:text-gray-400'>
               <a
