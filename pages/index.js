@@ -14,8 +14,6 @@ import {
   AiOutlineMail
 } from 'react-icons/ai'
 import Image from 'next/image'
-import design from '../public/design.png'
-import code from '../public/code.png'
 import web0 from '../public/web0.png'
 import web1 from '../public/web1.png'
 import web2 from '../public/web2.png'
@@ -306,7 +304,7 @@ export default function Home(props) {
             <div className='lg:flex gap-10 mt-8'>
               <Services
                 inView={[-200, 0]}
-                img={code}
+                img="/code.png"
                 title="Full-Stack Development"
                 description="Building modern, scalable web applications with cutting-edge technologies"
                 tool1="Frontend: React, Next.js, TypeScript, TailwindCSS"
@@ -315,7 +313,7 @@ export default function Home(props) {
               />
               <Services
                 inView={[200, 0]}
-                img={design}
+                img="/design.png"
                 title="Enterprise Solutions & IT Support"
                 description="Providing enterprise-grade solutions, automation, and comprehensive IT infrastructure management"
                 tool1="Salesforce Development & Administration"

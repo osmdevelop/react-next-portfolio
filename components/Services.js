@@ -1,6 +1,5 @@
 import react from "react";
 import { motion } from "framer-motion"
-import Image from 'next/image'
 
 export default function Services(props) {
     return (
@@ -15,7 +14,7 @@ export default function Services(props) {
             >
                 <div className="text-center shadow-lg p-8 rounded-xl my-10 bg-white dark:bg-gray-800 dark:text-gray-200 flex flex-col justify-center items-center hover:shadow-xl transition-shadow duration-300 border border-gray-200 dark:border-gray-700">
                     <div className="mb-6">
-                        <Image src={props.img} width={80} height={80} alt={props.title} className="opacity-90" />
+                        <img src={props.img} width={80} height={80} alt={props.title} className="opacity-90" />
                     </div>
                     <h3 className='text-xl font-bold pt-4 pb-3 text-gray-800 dark:text-white'>{props.title}</h3>
                     <p className='py-2 text-gray-700 dark:text-gray-300 leading-relaxed mb-6'>{props.description}</p>
