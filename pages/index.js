@@ -215,7 +215,7 @@ export default function Home(props) {
               Digital Banking & Automation | Lead Software Engineer | AI Systems for Regulated Industries
             </h2>
             <p className='text-lg py-5 leading-8 text-gray-700 md:text-xl max-w-2xl mx-auto dark:text-gray-300 mb-8'>
-              Results-driven software engineer specializing in secure, scalable, and user-centric web applications. Proven track record of translating complex requirements into efficient and elegant solutions. Dedicated to continuous learning and exploring the latest technologies to drive innovation.
+              Software Engineer and Digital Banking Specialist building AI systems for regulated industries. At a federally regulated credit union, I support digital banking initiatives, vendor communication, system improvements, and wire transfer enhancements, alongside AI-assisted automation of internal workflows. In parallel, I develop compliance-intelligence platforms across the full stack: React frontends, Cloudflare-native infrastructure, RAG pipelines, and document intelligence, backed by hands-on experience deploying and securing systems in production.
             </p>
 
             {/* Social Links */}
